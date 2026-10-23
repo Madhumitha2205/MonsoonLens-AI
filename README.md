@@ -8,6 +8,14 @@
 
 ```
 MonsoonLens-AI/
+├── app.py                                         # Streamlit web application entry point & overview
+├── pages/
+│   ├── 1_Rainfall_Explorer.py                     # Deep-dive interactive slice & filter explorer
+│   ├── 2_Regional_Analysis.py                     # Subdivisional rankings, CV%, & multi-region comparisons
+│   ├── 3_Seasonal_Insights.py                     # 4-season dynamics, monsoon share, & correlation matrix
+│   └── 4_Data_Quality_and_Reports.py              # Quality audit logs, report viewers, & download center
+├── .streamlit/
+│   └── config.toml                                # Theme configuration (dark navy, cyan accents)
 ├── data/
 │   ├── raw/
 │   │   └── rainfall_area-wt_sd_1901-2015.csv      # Original raw dataset (strictly read-only)
@@ -21,6 +29,7 @@ MonsoonLens-AI/
 ├── src/
 │   ├── __init__.py                                # Package marker
 │   ├── config.py                                  # Central configuration, schemas & thresholds
+│   ├── dashboard_utils.py                         # Loaders, caching, Plotly chart generators, & UI components
 │   ├── inspect_data.py                            # Non-destructive exploratory dataset audit script
 │   ├── preprocess.py                              # Core reproducible preprocessing pipeline
 │   ├── validate_data.py                           # Post-processing validation & verification engine
@@ -37,7 +46,8 @@ MonsoonLens-AI/
 │   └── 01_data_exploration.ipynb                 # Interactive visual exploration & diagnostic notebook
 ├── tests/
 │   ├── test_preprocessing.py                      # Preprocessing test suite (15 unit/integration tests)
-│   └── test_eda.py                                # EDA calculation & figure test suite (7 tests)
+│   ├── test_eda.py                                # EDA calculation & figure test suite (7 tests)
+│   └── test_dashboard.py                          # Dashboard loaders, filtering & UI tests (20 tests)
 ├── logs/                                          # Execution logs
 ├── requirements.txt                               # Project dependencies
 ├── README.md                                      # Project guide and execution documentation
@@ -139,3 +149,129 @@ All processed artifacts are written to `data/processed/`:
    33 subdivisions possess 115 continuous years (1901–2015), while 3 subdivisions contain historical observation gaps (Andaman & Nicobar Islands missing WWII years 1943–1945, 1909, 1948; Arunachal Pradesh starting in 1916; Lakshadweep missing 1918). Feature engineering strictly validates year differences ($YEAR_t - YEAR_{t-1} == 1$) to prevent computing false lag differences across non-consecutive years.
 5. **Raw Data Immutability:**
    The raw dataset `data/raw/rainfall_area-wt_sd_1901-2015.csv` is accessed in read-only mode and is never overwritten or mutated.
+
+---
+
+## 6. Interactive Streamlit Web Dashboard
+
+The **MonsoonLens AI** interactive frontend is a multi-page Streamlit analytical web platform designed for exploring 115 years of meteorological observations, testing hypotheses, and auditing data quality.
+
+### 6.1 Multi-Page Architecture
+
+1. **Executive Overview (`app.py`)**:
+   - High-level KPIs: temporal coverage (115 yrs), subdivision count (36), record volume (49,392), national mean annual precipitation (1,411.0 mm), and Southwest Monsoon share (74.6%).
+   - All-India annual rainfall time series with 10-year rolling window and OLS trend fit.
+   - Chronological monthly climatology distribution and percentage share.
+   - Seasonal breakdown and Top-5 wettest vs. driest subdivision previews.
+   - Core empirical takeaways and scientific integrity callouts.
+
+2. **Interactive Rainfall Explorer (`pages/1_Rainfall_Explorer.py`)**:
+   - Flexible multidimensional filtering: timeline slider (1901–2015), subdivision selector, month multiselect, and season selector.
+   - Synchronized Plotly visualizations: annual time-series with configurable rolling averages, monthly climatology, Year × Month temporal heatmaps, and distribution boxplots.
+   - Dynamic summary metrics (filtered row count, mean, max, and missingness percentage).
+   - Filtered dataset table with direct CSV export.
+
+3. **Regional & Subdivisional Analysis (`pages/2_Regional_Analysis.py`)**:
+   - Ranked annual rainfall bar charts across all 36 subdivisions.
+   - Coefficient of Variation (CV%) ranking highlighting the contrast between high-rainfall coastal/mountain zones and arid interior zones.
+   - Side-by-side multi-subdivision comparisons for monthly profiles and annual trajectories.
+   - Full 36-subdivision × 12-month climatology intensity heatmap.
+   - Comprehensive regional statistical summary table with CSV export.
+
+4. **Seasonal Insights & Dynamics (`pages/3_Seasonal_Insights.py`)**:
+   - Investigation across IMD standard seasons: Winter (Jan–Feb), Pre-Monsoon (Mar–May), Southwest Monsoon (Jun–Sep), and Post-Monsoon (Oct–Dec).
+   - Seasonal contribution donut chart and bar comparisons.
+   - Multi-decadal annual trajectories for all four seasons plotted concurrently.
+   - Inter-seasonal Pearson and Spearman correlation matrix heatmaps.
+   - Seasonal summary tables with CSV download buttons.
+
+5. **Data Quality, Audit Logs & Reports (`pages/4_Data_Quality_and_Reports.py`)**:
+   - Complete inventory and file health check of all processed datasets and metadata.
+   - Granular audit trail explorer for 453 recorded quality flags, filterable by flag type, severity, and subdivision.
+   - Machine-readable metadata viewer for `dataset_metadata.json`.
+   - In-app interactive Markdown viewers for Stage 1, Stage 2, and Validation reports.
+   - High-resolution static publication figure gallery (`reports/figures/`).
+   - Unified Research Artifact Download Center for all processed CSVs and reports.
+
+---
+
+## 7. Dashboard Launch Instructions (Windows PowerShell)
+
+Ensure Python 3.10+ is installed and your terminal is in the project root directory.
+
+### Quick Launch Commands:
+
+```powershell
+# 1. Activate the project virtual environment
+.\.venv\Scripts\Activate.ps1
+
+# 2. Install / verify required dependencies
+python -m pip install -r requirements.txt
+
+# 3. Launch the Streamlit application
+python -m streamlit run app.py
+```
+
+The application will start and automatically open in your default browser at:
+`http://localhost:8501`
+
+### PowerShell Execution Policy Workaround
+
+If PowerShell displays an execution policy error when running `.\.venv\Scripts\Activate.ps1` (`File cannot be loaded because running scripts is disabled on this system`), use either of the following safe workarounds without altering machine-wide security policies:
+
+**Option A (Session-scoped bypass):**
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+python -m streamlit run app.py
+```
+
+**Option B (Direct execution via virtual environment Python):**
+```powershell
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+---
+
+## 8. Running the Complete Automated Test Suite
+
+MonsoonLens AI includes 42 automated unit and integration tests covering data preprocessing, feature engineering continuity safeguards, EDA statistical calculations, figure integrity, dashboard loaders, schema enforcement, filtering logic, and Plotly generators.
+
+```powershell
+# Run all 42 automated tests via pytest
+.\.venv\Scripts\pytest tests -v
+```
+
+All 42 tests should execute and report `PASSED`.
+
+---
+
+## 9. Future Deployment Guide
+
+The frontend is fully container-ready and headless-configured via `.streamlit/config.toml`.
+
+### Streamlit Community Cloud
+1. Push the branch to GitHub.
+2. Connect your repository on [share.streamlit.io](https://share.streamlit.io).
+3. Set the main file path to `app.py`.
+4. Deploy! All processed datasets are checked into the repository and load instantly.
+
+### Docker Deployment
+Create a minimal `Dockerfile`:
+```dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+EXPOSE 8501
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+```
+
+---
+
+## 10. Scientific Limitations and Machine Learning Roadmap
+
+1. **Descriptive Empirical Analysis**: Current dashboard metrics reflect ground-truth historical rain-gauge observations. The application does not claim unvalidated future rainfall forecasting.
+2. **Missing Observations**: Historical gaps (e.g. WWII in Andaman & Nicobar) are preserved as `NaN` rather than synthetic values.
+3. **Machine Learning Extensions**: Feature matrices engineered in `src/feature_engineering.py` (lagged variables, rolling anomaly deviations, and change-point segments) will serve as foundation inputs for future Stage 3 predictive models and climate regime classification.
