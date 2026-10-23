@@ -17,12 +17,13 @@ DATA_DIR: Path = BASE_DIR / "data"
 RAW_DATA_DIR: Path = DATA_DIR / "raw"
 PROCESSED_DATA_DIR: Path = DATA_DIR / "processed"
 REPORTS_DIR: Path = BASE_DIR / "reports"
+FIGURES_DIR: Path = REPORTS_DIR / "figures"
 LOGS_DIR: Path = BASE_DIR / "logs"
 TESTS_DIR: Path = BASE_DIR / "tests"
 NOTEBOOKS_DIR: Path = BASE_DIR / "notebooks"
 
 # Ensure runtime directories exist
-for directory in [DATA_DIR, RAW_DATA_DIR, PROCESSED_DATA_DIR, REPORTS_DIR, LOGS_DIR]:
+for directory in [DATA_DIR, RAW_DATA_DIR, PROCESSED_DATA_DIR, REPORTS_DIR, FIGURES_DIR, LOGS_DIR]:
     directory.mkdir(parents=True, exist_ok=True)
 
 # -----------------------------------------------------------------------------
@@ -43,6 +44,7 @@ INITIAL_REPORT_PATH: Path = REPORTS_DIR / "initial_data_quality_report.md"
 PREPROCESSING_REPORT_PATH: Path = REPORTS_DIR / "preprocessing_report.md"
 VALIDATION_REPORT_PATH: Path = REPORTS_DIR / "validation_report.md"
 DATA_QUALITY_SUMMARY_PATH: Path = REPORTS_DIR / "data_quality_summary.csv"
+EDA_REPORT_PATH: Path = REPORTS_DIR / "eda_report.md"
 
 # -----------------------------------------------------------------------------
 # Column Schemas and Mappings

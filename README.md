@@ -24,16 +24,20 @@ MonsoonLens-AI/
 │   ├── inspect_data.py                            # Non-destructive exploratory dataset audit script
 │   ├── preprocess.py                              # Core reproducible preprocessing pipeline
 │   ├── validate_data.py                           # Post-processing validation & verification engine
-│   └── feature_engineering.py                     # Leakage-free time-series & anomaly features
+│   ├── feature_engineering.py                     # Leakage-free time-series & anomaly features
+│   └── eda_analysis.py                            # Comprehensive EDA analysis & figure generation
 ├── reports/
+│   ├── figures/                                   # 7 Publication-grade charts (trends, heatmaps, boxplots)
 │   ├── initial_data_quality_report.md             # Baseline raw dataset audit report
 │   ├── preprocessing_report.md                    # Comprehensive pipeline execution report
 │   ├── validation_report.md                       # Systematic PASS/FAIL validation report
-│   └── data_quality_summary.csv                   # Tabular quality summary per column
+│   ├── data_quality_summary.csv                   # Tabular quality summary per column
+│   └── eda_report.md                              # Comprehensive Stage 2 EDA findings report
 ├── notebooks/
 │   └── 01_data_exploration.ipynb                 # Interactive visual exploration & diagnostic notebook
 ├── tests/
-│   └── test_preprocessing.py                      # Automated test suite (15 unit/integration tests)
+│   ├── test_preprocessing.py                      # Preprocessing test suite (15 unit/integration tests)
+│   └── test_eda.py                                # EDA calculation & figure test suite (7 tests)
 ├── logs/                                          # Execution logs
 ├── requirements.txt                               # Project dependencies
 ├── README.md                                      # Project guide and execution documentation
@@ -82,10 +86,28 @@ Performs 19 automated integrity checks (non-negativity, missingness preservation
 python src/validate_data.py
 ```
 
-### Step 4: Run the Automated Unit Tests
+### Step 4: Run the Preprocessing Unit Tests
 Executes 15 comprehensive unit and integration tests covering edge cases, synthetic error detection, group isolation, and continuity handling.
 ```powershell
 python -m unittest tests/test_preprocessing.py -v
+```
+
+### Step 5: Run Stage 2 Exploratory Data Analysis (EDA)
+Computes national and subdivisional descriptive statistics, generates 7 publication-grade figures in `reports/figures/`, and outputs the comprehensive report `reports/eda_report.md`.
+```powershell
+python src/eda_analysis.py
+```
+
+### Step 6: Run All Automated Unit Tests (Preprocessing + EDA)
+Executes all 22 project unit and integration tests verifying both preprocessing integrity and EDA statistical calculations.
+```powershell
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
+### Step 7: Launch Interactive Exploration Notebook
+Explore the interactive visual workflow in Jupyter:
+```powershell
+jupyter notebook notebooks/01_data_exploration.ipynb
 ```
 
 ---
