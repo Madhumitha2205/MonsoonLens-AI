@@ -1,0 +1,454 @@
+subdivision,year,field,original_value,flag_type,severity,reason
+ANDAMAN & NICOBAR ISLANDS,1901,NOV,558.2,STATISTICAL_EXTREME,INFO,Rainfall (558.2 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1901,Oct-Dec,980.3,STATISTICAL_EXTREME,INFO,Rainfall (980.3 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1902,NOV,359.0,STATISTICAL_EXTREME,INFO,Rainfall (359.0 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1904,SEP,820.4,STATISTICAL_EXTREME,INFO,Rainfall (820.4 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1905,DEC,344.7,STATISTICAL_EXTREME,INFO,Rainfall (344.7 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1907,NOV,648.9,STATISTICAL_EXTREME,INFO,Rainfall (648.9 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1907,Oct-Dec,1158.9,STATISTICAL_EXTREME,INFO,Rainfall (1158.9 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1912,JAN,583.7,STATISTICAL_EXTREME,INFO,Rainfall (583.7 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1912,Jan-Feb,584.5,STATISTICAL_EXTREME,INFO,Rainfall (584.5 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1914,DEC,289.7,STATISTICAL_EXTREME,INFO,Rainfall (289.7 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1915,DEC,318.0,STATISTICAL_EXTREME,INFO,Rainfall (318.0 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1915,OCT,468.1,STATISTICAL_EXTREME,INFO,Rainfall (468.1 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1915,Oct-Dec,1044.5,STATISTICAL_EXTREME,INFO,Rainfall (1044.5 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1918,MAY,729.3,STATISTICAL_EXTREME,INFO,Rainfall (729.3 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1918,NOV,366.9,STATISTICAL_EXTREME,INFO,Rainfall (366.9 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1922,JAN,245.3,STATISTICAL_EXTREME,INFO,Rainfall (245.3 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1922,NOV,541.0,STATISTICAL_EXTREME,INFO,Rainfall (541.0 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1922,Oct-Dec,895.2,STATISTICAL_EXTREME,INFO,Rainfall (895.2 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1923,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ANDAMAN & NICOBAR ISLANDS,1923,MAR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAR is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1924,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ANDAMAN & NICOBAR ISLANDS,1924,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1924,NOV,378.6,STATISTICAL_EXTREME,INFO,Rainfall (378.6 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1926,DEC,560.7,STATISTICAL_EXTREME,INFO,Rainfall (560.7 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1926,Oct-Dec,1152.9,STATISTICAL_EXTREME,INFO,Rainfall (1152.9 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1926,SEP,719.3,STATISTICAL_EXTREME,INFO,Rainfall (719.3 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1932,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ANDAMAN & NICOBAR ISLANDS,1932,AUG,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for AUG is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1932,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1932,JUL,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUL is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1932,JUN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUN is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1932,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1932,OCT,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for OCT is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1932,SEP,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for SEP is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1933,SEP,759.0,STATISTICAL_EXTREME,INFO,Rainfall (759.0 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1934,SEP,761.1,STATISTICAL_EXTREME,INFO,Rainfall (761.1 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1935,MAY,726.8,STATISTICAL_EXTREME,INFO,Rainfall (726.8 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1936,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ANDAMAN & NICOBAR ISLANDS,1936,APR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for APR is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1937,DEC,617.5,STATISTICAL_EXTREME,INFO,Rainfall (617.5 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1937,Oct-Dec,1252.5,STATISTICAL_EXTREME,INFO,Rainfall (1252.5 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1940,DEC,318.8,STATISTICAL_EXTREME,INFO,Rainfall (318.8 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1941,DEC,279.5,STATISTICAL_EXTREME,INFO,Rainfall (279.5 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1941,Oct-Dec,928.3,STATISTICAL_EXTREME,INFO,Rainfall (928.3 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1942,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ANDAMAN & NICOBAR ISLANDS,1942,APR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for APR is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,AUG,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for AUG is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,JUL,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUL is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,JUN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUN is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,MAR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAR is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,MAY,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAY is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,OCT,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for OCT is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1942,SEP,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for SEP is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1947,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ANDAMAN & NICOBAR ISLANDS,1947,SEP,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for SEP is missing from historical record
+ANDAMAN & NICOBAR ISLANDS,1951,DEC,434.8,STATISTICAL_EXTREME,INFO,Rainfall (434.8 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1951,OCT,489.0,STATISTICAL_EXTREME,INFO,Rainfall (489.0 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1951,Oct-Dec,1133.4,STATISTICAL_EXTREME,INFO,Rainfall (1133.4 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1954,SEP,763.8,STATISTICAL_EXTREME,INFO,Rainfall (763.8 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1955,MAY,663.6,STATISTICAL_EXTREME,INFO,Rainfall (663.6 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1955,NOV,362.9,STATISTICAL_EXTREME,INFO,Rainfall (362.9 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1955,OCT,466.5,STATISTICAL_EXTREME,INFO,Rainfall (466.5 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1955,Oct-Dec,873.6,STATISTICAL_EXTREME,INFO,Rainfall (873.6 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1956,OCT,458.7,STATISTICAL_EXTREME,INFO,Rainfall (458.7 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1961,MAY,973.1,STATISTICAL_EXTREME,INFO,Rainfall (973.1 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1961,Mar-May,1094.5,STATISTICAL_EXTREME,INFO,Rainfall (1094.5 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1962,DEC,384.9,STATISTICAL_EXTREME,INFO,Rainfall (384.9 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1965,DEC,500.4,STATISTICAL_EXTREME,INFO,Rainfall (500.4 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1965,Oct-Dec,978.8,STATISTICAL_EXTREME,INFO,Rainfall (978.8 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1966,DEC,311.9,STATISTICAL_EXTREME,INFO,Rainfall (311.9 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1970,NOV,418.4,STATISTICAL_EXTREME,INFO,Rainfall (418.4 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1970,Oct-Dec,1037.7,STATISTICAL_EXTREME,INFO,Rainfall (1037.7 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1971,OCT,505.3,STATISTICAL_EXTREME,INFO,Rainfall (505.3 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1972,NOV,413.9,STATISTICAL_EXTREME,INFO,Rainfall (413.9 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1973,DEC,289.1,STATISTICAL_EXTREME,INFO,Rainfall (289.1 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1973,Oct-Dec,886.1,STATISTICAL_EXTREME,INFO,Rainfall (886.1 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1974,NOV,372.2,STATISTICAL_EXTREME,INFO,Rainfall (372.2 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1975,JAN,276.9,STATISTICAL_EXTREME,INFO,Rainfall (276.9 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1976,DEC,359.6,STATISTICAL_EXTREME,INFO,Rainfall (359.6 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1980,DEC,500.7,STATISTICAL_EXTREME,INFO,Rainfall (500.7 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1980,MAY,728.4,STATISTICAL_EXTREME,INFO,Rainfall (728.4 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1980,Oct-Dec,896.3,STATISTICAL_EXTREME,INFO,Rainfall (896.3 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1984,DEC,445.2,STATISTICAL_EXTREME,INFO,Rainfall (445.2 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1984,Oct-Dec,951.2,STATISTICAL_EXTREME,INFO,Rainfall (951.2 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1987,DEC,334.1,STATISTICAL_EXTREME,INFO,Rainfall (334.1 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1987,Oct-Dec,1021.0,STATISTICAL_EXTREME,INFO,Rainfall (1021.0 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1988,NOV,583.0,STATISTICAL_EXTREME,INFO,Rainfall (583.0 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1988,Oct-Dec,924.3,STATISTICAL_EXTREME,INFO,Rainfall (924.3 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1994,SEP,775.1,STATISTICAL_EXTREME,INFO,Rainfall (775.1 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1995,NOV,452.9,STATISTICAL_EXTREME,INFO,Rainfall (452.9 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1998,OCT,618.6,STATISTICAL_EXTREME,INFO,Rainfall (618.6 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,1998,Oct-Dec,935.4,STATISTICAL_EXTREME,INFO,Rainfall (935.4 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2001,MAY,705.3,STATISTICAL_EXTREME,INFO,Rainfall (705.3 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2005,DEC,283.9,STATISTICAL_EXTREME,INFO,Rainfall (283.9 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2005,Oct-Dec,877.5,STATISTICAL_EXTREME,INFO,Rainfall (877.5 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2010,Oct-Dec,917.3,STATISTICAL_EXTREME,INFO,Rainfall (917.3 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2011,JAN,265.9,STATISTICAL_EXTREME,INFO,Rainfall (265.9 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2011,Jan-Feb,350.7,STATISTICAL_EXTREME,INFO,Rainfall (350.7 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2011,MAR,272.8,STATISTICAL_EXTREME,INFO,Rainfall (272.8 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2011,SEP,757.1,STATISTICAL_EXTREME,INFO,Rainfall (757.1 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2012,SEP,868.9,STATISTICAL_EXTREME,INFO,Rainfall (868.9 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2013,OCT,455.8,STATISTICAL_EXTREME,INFO,Rainfall (455.8 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ANDAMAN & NICOBAR ISLANDS,2013,Oct-Dec,902.4,STATISTICAL_EXTREME,INFO,Rainfall (902.4 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ARUNACHAL PRADESH,1916,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ARUNACHAL PRADESH,1916,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+ARUNACHAL PRADESH,1916,JUL,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUL is missing from historical record
+ARUNACHAL PRADESH,1916,JUN,1124.9,STATISTICAL_EXTREME,INFO,Rainfall (1124.9 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1916,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+ARUNACHAL PRADESH,1916,OCT,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for OCT is missing from historical record
+ARUNACHAL PRADESH,1917,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ARUNACHAL PRADESH,1917,MAR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAR is missing from historical record
+ARUNACHAL PRADESH,1918,ANNUAL,5486.3,STATISTICAL_EXTREME,INFO,Rainfall (5486.3 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1918,JUN,1609.9,STATISTICAL_EXTREME,INFO,Rainfall (1609.9 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1918,Jun-Sep,4121.3,STATISTICAL_EXTREME,INFO,Rainfall (4121.3 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+ARUNACHAL PRADESH,1918,MAY,861.1,STATISTICAL_EXTREME,INFO,Rainfall (861.1 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1918,Mar-May,1196.9,STATISTICAL_EXTREME,INFO,Rainfall (1196.9 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1919,ANNUAL,4693.9,STATISTICAL_EXTREME,INFO,Rainfall (4693.9 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1919,OCT,948.3,STATISTICAL_EXTREME,INFO,Rainfall (948.3 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1919,Oct-Dec,997.6,STATISTICAL_EXTREME,INFO,Rainfall (997.6 mm) exceeds 99.5th national percentile (870.7 mm); valid extreme event retained
+ARUNACHAL PRADESH,1920,MAR,605.6,STATISTICAL_EXTREME,INFO,Rainfall (605.6 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1920,Mar-May,1143.9,STATISTICAL_EXTREME,INFO,Rainfall (1143.9 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1921,ANNUAL,5691.4,STATISTICAL_EXTREME,INFO,Rainfall (5691.4 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1921,JUN,1233.2,STATISTICAL_EXTREME,INFO,Rainfall (1233.2 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1921,Jun-Sep,4155.5,STATISTICAL_EXTREME,INFO,Rainfall (4155.5 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+ARUNACHAL PRADESH,1921,Mar-May,1136.3,STATISTICAL_EXTREME,INFO,Rainfall (1136.3 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1922,OCT,483.5,STATISTICAL_EXTREME,INFO,Rainfall (483.5 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1924,ANNUAL,4450.5,STATISTICAL_EXTREME,INFO,Rainfall (4450.5 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1924,JUN,1165.0,STATISTICAL_EXTREME,INFO,Rainfall (1165.0 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1925,ANNUAL,4439.8,STATISTICAL_EXTREME,INFO,Rainfall (4439.8 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1925,SEP,1222.0,STATISTICAL_EXTREME,INFO,Rainfall (1222.0 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1927,ANNUAL,5253.2,STATISTICAL_EXTREME,INFO,Rainfall (5253.2 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1927,APR,384.0,STATISTICAL_EXTREME,INFO,Rainfall (384.0 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1927,FEB,208.5,STATISTICAL_EXTREME,INFO,Rainfall (208.5 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+ARUNACHAL PRADESH,1927,Jun-Sep,3805.3,STATISTICAL_EXTREME,INFO,Rainfall (3805.3 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+ARUNACHAL PRADESH,1927,OCT,537.2,STATISTICAL_EXTREME,INFO,Rainfall (537.2 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1927,SEP,1108.9,STATISTICAL_EXTREME,INFO,Rainfall (1108.9 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1928,ANNUAL,5272.7,STATISTICAL_EXTREME,INFO,Rainfall (5272.7 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1928,JUN,1168.3,STATISTICAL_EXTREME,INFO,Rainfall (1168.3 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1928,Jun-Sep,3849.2,STATISTICAL_EXTREME,INFO,Rainfall (3849.2 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+ARUNACHAL PRADESH,1928,OCT,633.5,STATISTICAL_EXTREME,INFO,Rainfall (633.5 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1929,APR,492.3,STATISTICAL_EXTREME,INFO,Rainfall (492.3 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1929,Mar-May,1232.4,STATISTICAL_EXTREME,INFO,Rainfall (1232.4 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1930,ANNUAL,4334.1,STATISTICAL_EXTREME,INFO,Rainfall (4334.1 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1930,APR,565.4,STATISTICAL_EXTREME,INFO,Rainfall (565.4 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1931,ANNUAL,4872.1,STATISTICAL_EXTREME,INFO,Rainfall (4872.1 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1931,APR,502.7,STATISTICAL_EXTREME,INFO,Rainfall (502.7 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1931,JUN,1149.4,STATISTICAL_EXTREME,INFO,Rainfall (1149.4 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1931,Mar-May,1012.0,STATISTICAL_EXTREME,INFO,Rainfall (1012.0 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1932,ANNUAL,4850.9,STATISTICAL_EXTREME,INFO,Rainfall (4850.9 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1932,MAY,661.6,STATISTICAL_EXTREME,INFO,Rainfall (661.6 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1932,Mar-May,1049.8,STATISTICAL_EXTREME,INFO,Rainfall (1049.8 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1934,ANNUAL,4575.7,STATISTICAL_EXTREME,INFO,Rainfall (4575.7 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1934,APR,595.1,STATISTICAL_EXTREME,INFO,Rainfall (595.1 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1934,Mar-May,1177.9,STATISTICAL_EXTREME,INFO,Rainfall (1177.9 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1935,JUN,1147.1,STATISTICAL_EXTREME,INFO,Rainfall (1147.1 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1936,ANNUAL,4788.9,STATISTICAL_EXTREME,INFO,Rainfall (4788.9 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1938,ANNUAL,6129.0,STATISTICAL_EXTREME,INFO,Rainfall (6129.0 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1938,APR,395.3,STATISTICAL_EXTREME,INFO,Rainfall (395.3 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1938,JUN,1511.3,STATISTICAL_EXTREME,INFO,Rainfall (1511.3 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1938,Jun-Sep,4534.5,STATISTICAL_EXTREME,INFO,Rainfall (4534.5 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+ARUNACHAL PRADESH,1938,MAR,340.5,STATISTICAL_EXTREME,INFO,Rainfall (340.5 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1938,Mar-May,1042.3,STATISTICAL_EXTREME,INFO,Rainfall (1042.3 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1938,SEP,877.3,STATISTICAL_EXTREME,INFO,Rainfall (877.3 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1939,APR,388.1,STATISTICAL_EXTREME,INFO,Rainfall (388.1 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1939,JUN,1132.5,STATISTICAL_EXTREME,INFO,Rainfall (1132.5 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1940,MAR,381.8,STATISTICAL_EXTREME,INFO,Rainfall (381.8 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1940,SEP,791.4,STATISTICAL_EXTREME,INFO,Rainfall (791.4 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1941,MAY,652.4,STATISTICAL_EXTREME,INFO,Rainfall (652.4 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1941,Mar-May,1055.7,STATISTICAL_EXTREME,INFO,Rainfall (1055.7 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1942,JUN,1182.6,STATISTICAL_EXTREME,INFO,Rainfall (1182.6 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1942,MAR,277.8,STATISTICAL_EXTREME,INFO,Rainfall (277.8 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1942,Mar-May,1169.1,STATISTICAL_EXTREME,INFO,Rainfall (1169.1 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1943,MAR,286.3,STATISTICAL_EXTREME,INFO,Rainfall (286.3 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1943,MAY,656.6,STATISTICAL_EXTREME,INFO,Rainfall (656.6 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1943,Mar-May,1265.4,STATISTICAL_EXTREME,INFO,Rainfall (1265.4 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1943,SEP,727.7,STATISTICAL_EXTREME,INFO,Rainfall (727.7 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1944,MAY,664.6,STATISTICAL_EXTREME,INFO,Rainfall (664.6 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1946,Mar-May,1011.2,STATISTICAL_EXTREME,INFO,Rainfall (1011.2 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1947,ANNUAL,4369.1,STATISTICAL_EXTREME,INFO,Rainfall (4369.1 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1947,APR,460.2,STATISTICAL_EXTREME,INFO,Rainfall (460.2 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1947,Mar-May,1113.2,STATISTICAL_EXTREME,INFO,Rainfall (1113.2 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1948,ANNUAL,6331.1,STATISTICAL_EXTREME,INFO,Rainfall (6331.1 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1948,APR,441.1,STATISTICAL_EXTREME,INFO,Rainfall (441.1 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1948,JUL,2362.8,STATISTICAL_EXTREME,INFO,Rainfall (2362.8 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+ARUNACHAL PRADESH,1948,Jun-Sep,4206.0,STATISTICAL_EXTREME,INFO,Rainfall (4206.0 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+ARUNACHAL PRADESH,1948,MAY,1168.6,STATISTICAL_EXTREME,INFO,Rainfall (1168.6 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1948,Mar-May,1745.8,STATISTICAL_EXTREME,INFO,Rainfall (1745.8 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1949,ANNUAL,4874.7,STATISTICAL_EXTREME,INFO,Rainfall (4874.7 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1949,APR,436.9,STATISTICAL_EXTREME,INFO,Rainfall (436.9 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1949,MAR,287.4,STATISTICAL_EXTREME,INFO,Rainfall (287.4 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1949,Mar-May,1291.5,STATISTICAL_EXTREME,INFO,Rainfall (1291.5 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1950,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ARUNACHAL PRADESH,1950,APR,425.2,STATISTICAL_EXTREME,INFO,Rainfall (425.2 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1950,JUN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUN is missing from historical record
+ARUNACHAL PRADESH,1951,APR,441.0,STATISTICAL_EXTREME,INFO,Rainfall (441.0 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1951,MAR,309.9,STATISTICAL_EXTREME,INFO,Rainfall (309.9 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1951,Mar-May,1095.3,STATISTICAL_EXTREME,INFO,Rainfall (1095.3 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1953,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ARUNACHAL PRADESH,1953,OCT,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for OCT is missing from historical record
+ARUNACHAL PRADESH,1957,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ARUNACHAL PRADESH,1957,FEB,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for FEB is missing from historical record
+ARUNACHAL PRADESH,1957,JAN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JAN is missing from historical record
+ARUNACHAL PRADESH,1957,MAR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAR is missing from historical record
+ARUNACHAL PRADESH,1958,ANNUAL,5063.5,STATISTICAL_EXTREME,INFO,Rainfall (5063.5 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1958,AUG,1664.6,STATISTICAL_EXTREME,INFO,Rainfall (1664.6 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1958,MAY,698.6,STATISTICAL_EXTREME,INFO,Rainfall (698.6 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1958,OCT,669.4,STATISTICAL_EXTREME,INFO,Rainfall (669.4 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1959,MAY,671.8,STATISTICAL_EXTREME,INFO,Rainfall (671.8 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1960,SEP,1034.8,STATISTICAL_EXTREME,INFO,Rainfall (1034.8 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1961,FEB,204.2,STATISTICAL_EXTREME,INFO,Rainfall (204.2 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+ARUNACHAL PRADESH,1961,MAR,289.6,STATISTICAL_EXTREME,INFO,Rainfall (289.6 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1962,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+ARUNACHAL PRADESH,1962,AUG,1405.9,STATISTICAL_EXTREME,INFO,Rainfall (1405.9 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1962,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+ARUNACHAL PRADESH,1962,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+ARUNACHAL PRADESH,1963,AUG,1199.3,STATISTICAL_EXTREME,INFO,Rainfall (1199.3 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+ARUNACHAL PRADESH,1964,ANNUAL,4959.3,STATISTICAL_EXTREME,INFO,Rainfall (4959.3 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+ARUNACHAL PRADESH,1964,JUL,1506.1,STATISTICAL_EXTREME,INFO,Rainfall (1506.1 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+ARUNACHAL PRADESH,1964,JUN,1432.8,STATISTICAL_EXTREME,INFO,Rainfall (1432.8 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+ARUNACHAL PRADESH,1964,Jun-Sep,3896.1,STATISTICAL_EXTREME,INFO,Rainfall (3896.1 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+ARUNACHAL PRADESH,1977,APR,560.2,STATISTICAL_EXTREME,INFO,Rainfall (560.2 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1977,Mar-May,1187.3,STATISTICAL_EXTREME,INFO,Rainfall (1187.3 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1984,APR,389.3,STATISTICAL_EXTREME,INFO,Rainfall (389.3 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1984,Mar-May,1004.9,STATISTICAL_EXTREME,INFO,Rainfall (1004.9 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1988,Mar-May,1065.4,STATISTICAL_EXTREME,INFO,Rainfall (1065.4 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,1989,APR,388.7,STATISTICAL_EXTREME,INFO,Rainfall (388.7 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,2010,APR,466.9,STATISTICAL_EXTREME,INFO,Rainfall (466.9 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,2010,Mar-May,1017.5,STATISTICAL_EXTREME,INFO,Rainfall (1017.5 mm) exceeds 99.5th national percentile (1002.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,2012,APR,403.4,STATISTICAL_EXTREME,INFO,Rainfall (403.4 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ARUNACHAL PRADESH,2012,SEP,724.9,STATISTICAL_EXTREME,INFO,Rainfall (724.9 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+ASSAM & MEGHALAYA,1904,APR,457.1,STATISTICAL_EXTREME,INFO,Rainfall (457.1 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ASSAM & MEGHALAYA,1915,MAY,662.9,STATISTICAL_EXTREME,INFO,Rainfall (662.9 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ASSAM & MEGHALAYA,1948,MAY,681.2,STATISTICAL_EXTREME,INFO,Rainfall (681.2 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+ASSAM & MEGHALAYA,1977,APR,375.1,STATISTICAL_EXTREME,INFO,Rainfall (375.1 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+ASSAM & MEGHALAYA,2010,APR,389.3,STATISTICAL_EXTREME,INFO,Rainfall (389.3 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+COASTAL ANDHRA PRADESH,1958,OCT,527.2,STATISTICAL_EXTREME,INFO,Rainfall (527.2 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+COASTAL KARNATAKA,1908,JUL,1904.9,STATISTICAL_EXTREME,INFO,Rainfall (1904.9 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1914,JUL,1583.7,STATISTICAL_EXTREME,INFO,Rainfall (1583.7 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1918,MAY,699.5,STATISTICAL_EXTREME,INFO,Rainfall (699.5 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1923,JUL,1627.2,STATISTICAL_EXTREME,INFO,Rainfall (1627.2 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1924,JUL,1515.4,STATISTICAL_EXTREME,INFO,Rainfall (1515.4 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1925,JUN,1176.4,STATISTICAL_EXTREME,INFO,Rainfall (1176.4 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,1929,JUN,1361.6,STATISTICAL_EXTREME,INFO,Rainfall (1361.6 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,1931,AUG,1201.9,STATISTICAL_EXTREME,INFO,Rainfall (1201.9 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1937,JUL,1531.7,STATISTICAL_EXTREME,INFO,Rainfall (1531.7 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1940,AUG,1247.4,STATISTICAL_EXTREME,INFO,Rainfall (1247.4 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1946,JUN,1227.0,STATISTICAL_EXTREME,INFO,Rainfall (1227.0 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,1950,JUL,1506.7,STATISTICAL_EXTREME,INFO,Rainfall (1506.7 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1950,SEP,716.5,STATISTICAL_EXTREME,INFO,Rainfall (716.5 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1953,JUL,1630.1,STATISTICAL_EXTREME,INFO,Rainfall (1630.1 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1959,ANNUAL,4330.8,STATISTICAL_EXTREME,INFO,Rainfall (4330.8 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+COASTAL KARNATAKA,1959,JUL,1727.0,STATISTICAL_EXTREME,INFO,Rainfall (1727.0 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1959,Jun-Sep,3947.1,STATISTICAL_EXTREME,INFO,Rainfall (3947.1 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,1961,ANNUAL,5553.9,STATISTICAL_EXTREME,INFO,Rainfall (5553.9 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+COASTAL KARNATAKA,1961,JUL,1884.9,STATISTICAL_EXTREME,INFO,Rainfall (1884.9 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1961,Jun-Sep,4536.9,STATISTICAL_EXTREME,INFO,Rainfall (4536.9 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,1968,JUL,1550.5,STATISTICAL_EXTREME,INFO,Rainfall (1550.5 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1970,AUG,1130.5,STATISTICAL_EXTREME,INFO,Rainfall (1130.5 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1971,JUN,1113.2,STATISTICAL_EXTREME,INFO,Rainfall (1113.2 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,1975,JUN,1327.8,STATISTICAL_EXTREME,INFO,Rainfall (1327.8 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,1975,Jun-Sep,3919.1,STATISTICAL_EXTREME,INFO,Rainfall (3919.1 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,1978,JUN,1212.6,STATISTICAL_EXTREME,INFO,Rainfall (1212.6 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,1980,JUN,1193.3,STATISTICAL_EXTREME,INFO,Rainfall (1193.3 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,1981,AUG,1187.4,STATISTICAL_EXTREME,INFO,Rainfall (1187.4 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1981,Jun-Sep,3591.0,STATISTICAL_EXTREME,INFO,Rainfall (3591.0 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,1982,AUG,1579.1,STATISTICAL_EXTREME,INFO,Rainfall (1579.1 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1982,Jun-Sep,3798.2,STATISTICAL_EXTREME,INFO,Rainfall (3798.2 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,1983,AUG,1231.8,STATISTICAL_EXTREME,INFO,Rainfall (1231.8 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1983,Jun-Sep,3701.5,STATISTICAL_EXTREME,INFO,Rainfall (3701.5 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,1991,JUL,1501.7,STATISTICAL_EXTREME,INFO,Rainfall (1501.7 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1992,AUG,1097.5,STATISTICAL_EXTREME,INFO,Rainfall (1097.5 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1994,ANNUAL,4636.3,STATISTICAL_EXTREME,INFO,Rainfall (4636.3 mm) exceeds 99.5th national percentile (4329.0 mm); valid extreme event retained
+COASTAL KARNATAKA,1994,JUL,1748.2,STATISTICAL_EXTREME,INFO,Rainfall (1748.2 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,1994,JUN,1221.1,STATISTICAL_EXTREME,INFO,Rainfall (1221.1 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,1994,Jun-Sep,4144.4,STATISTICAL_EXTREME,INFO,Rainfall (4144.4 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,1997,AUG,1146.0,STATISTICAL_EXTREME,INFO,Rainfall (1146.0 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+COASTAL KARNATAKA,1997,Jun-Sep,3575.8,STATISTICAL_EXTREME,INFO,Rainfall (3575.8 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,1999,JUL,1525.9,STATISTICAL_EXTREME,INFO,Rainfall (1525.9 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,2007,Jun-Sep,3567.2,STATISTICAL_EXTREME,INFO,Rainfall (3567.2 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,2009,JUL,1778.9,STATISTICAL_EXTREME,INFO,Rainfall (1778.9 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,2012,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+COASTAL KARNATAKA,2012,JAN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JAN is missing from historical record
+COASTAL KARNATAKA,2013,JUL,1515.3,STATISTICAL_EXTREME,INFO,Rainfall (1515.3 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+COASTAL KARNATAKA,2013,JUN,1153.0,STATISTICAL_EXTREME,INFO,Rainfall (1153.0 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+COASTAL KARNATAKA,2013,Jun-Sep,3727.6,STATISTICAL_EXTREME,INFO,Rainfall (3727.6 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+COASTAL KARNATAKA,2014,AUG,1121.0,STATISTICAL_EXTREME,INFO,Rainfall (1121.0 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+HIMACHAL PRADESH,1901,Jan-Feb,312.3,STATISTICAL_EXTREME,INFO,Rainfall (312.3 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+HIMACHAL PRADESH,1911,JAN,246.3,STATISTICAL_EXTREME,INFO,Rainfall (246.3 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+HIMACHAL PRADESH,1911,MAR,277.3,STATISTICAL_EXTREME,INFO,Rainfall (277.3 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+HIMACHAL PRADESH,1945,JAN,196.0,STATISTICAL_EXTREME,INFO,Rainfall (196.0 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+HIMACHAL PRADESH,1948,MAR,382.0,STATISTICAL_EXTREME,INFO,Rainfall (382.0 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+HIMACHAL PRADESH,1950,JAN,211.0,STATISTICAL_EXTREME,INFO,Rainfall (211.0 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+HIMACHAL PRADESH,1954,FEB,271.8,STATISTICAL_EXTREME,INFO,Rainfall (271.8 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+HIMACHAL PRADESH,1954,JAN,196.4,STATISTICAL_EXTREME,INFO,Rainfall (196.4 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+HIMACHAL PRADESH,1954,Jan-Feb,468.3,STATISTICAL_EXTREME,INFO,Rainfall (468.3 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+HIMACHAL PRADESH,1959,FEB,243.1,STATISTICAL_EXTREME,INFO,Rainfall (243.1 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+HIMACHAL PRADESH,1959,Jan-Feb,379.2,STATISTICAL_EXTREME,INFO,Rainfall (379.2 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+HIMACHAL PRADESH,1965,FEB,209.1,STATISTICAL_EXTREME,INFO,Rainfall (209.1 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+HIMACHAL PRADESH,1968,JAN,188.5,STATISTICAL_EXTREME,INFO,Rainfall (188.5 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+HIMACHAL PRADESH,1982,JAN,187.3,STATISTICAL_EXTREME,INFO,Rainfall (187.3 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+HIMACHAL PRADESH,1982,Jan-Feb,335.0,STATISTICAL_EXTREME,INFO,Rainfall (335.0 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+HIMACHAL PRADESH,1988,MAR,353.9,STATISTICAL_EXTREME,INFO,Rainfall (353.9 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+HIMACHAL PRADESH,2005,FEB,222.9,STATISTICAL_EXTREME,INFO,Rainfall (222.9 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+HIMACHAL PRADESH,2005,Jan-Feb,370.7,STATISTICAL_EXTREME,INFO,Rainfall (370.7 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1911,JAN,344.8,STATISTICAL_EXTREME,INFO,Rainfall (344.8 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,1911,Jan-Feb,397.1,STATISTICAL_EXTREME,INFO,Rainfall (397.1 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1911,MAR,285.4,STATISTICAL_EXTREME,INFO,Rainfall (285.4 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+JAMMU & KASHMIR,1914,FEB,228.9,STATISTICAL_EXTREME,INFO,Rainfall (228.9 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1915,FEB,218.3,STATISTICAL_EXTREME,INFO,Rainfall (218.3 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1918,MAR,269.0,STATISTICAL_EXTREME,INFO,Rainfall (269.0 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+JAMMU & KASHMIR,1919,JAN,187.7,STATISTICAL_EXTREME,INFO,Rainfall (187.7 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,1923,Jan-Feb,349.2,STATISTICAL_EXTREME,INFO,Rainfall (349.2 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1924,FEB,218.7,STATISTICAL_EXTREME,INFO,Rainfall (218.7 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1928,Jan-Feb,335.1,STATISTICAL_EXTREME,INFO,Rainfall (335.1 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1930,JAN,201.8,STATISTICAL_EXTREME,INFO,Rainfall (201.8 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,1930,Jan-Feb,317.9,STATISTICAL_EXTREME,INFO,Rainfall (317.9 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1935,JAN,193.3,STATISTICAL_EXTREME,INFO,Rainfall (193.3 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,1938,Jan-Feb,377.3,STATISTICAL_EXTREME,INFO,Rainfall (377.3 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1939,FEB,221.0,STATISTICAL_EXTREME,INFO,Rainfall (221.0 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1942,FEB,196.9,STATISTICAL_EXTREME,INFO,Rainfall (196.9 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1942,Jan-Feb,324.6,STATISTICAL_EXTREME,INFO,Rainfall (324.6 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1943,JAN,245.5,STATISTICAL_EXTREME,INFO,Rainfall (245.5 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,1948,MAR,261.1,STATISTICAL_EXTREME,INFO,Rainfall (261.1 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+JAMMU & KASHMIR,1950,JAN,367.8,STATISTICAL_EXTREME,INFO,Rainfall (367.8 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,1950,Jan-Feb,463.9,STATISTICAL_EXTREME,INFO,Rainfall (463.9 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1954,FEB,250.6,STATISTICAL_EXTREME,INFO,Rainfall (250.6 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1954,JAN,308.4,STATISTICAL_EXTREME,INFO,Rainfall (308.4 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,1954,Jan-Feb,559.0,STATISTICAL_EXTREME,INFO,Rainfall (559.0 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1957,Jan-Feb,328.7,STATISTICAL_EXTREME,INFO,Rainfall (328.7 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1966,FEB,199.3,STATISTICAL_EXTREME,INFO,Rainfall (199.3 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1983,MAR,318.8,STATISTICAL_EXTREME,INFO,Rainfall (318.8 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+JAMMU & KASHMIR,1988,MAR,280.2,STATISTICAL_EXTREME,INFO,Rainfall (280.2 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+JAMMU & KASHMIR,1990,DEC,259.7,STATISTICAL_EXTREME,INFO,Rainfall (259.7 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1990,FEB,206.5,STATISTICAL_EXTREME,INFO,Rainfall (206.5 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1990,Jan-Feb,316.7,STATISTICAL_EXTREME,INFO,Rainfall (316.7 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1990,MAR,309.8,STATISTICAL_EXTREME,INFO,Rainfall (309.8 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+JAMMU & KASHMIR,1991,FEB,216.5,STATISTICAL_EXTREME,INFO,Rainfall (216.5 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1995,FEB,210.2,STATISTICAL_EXTREME,INFO,Rainfall (210.2 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1995,Jan-Feb,311.6,STATISTICAL_EXTREME,INFO,Rainfall (311.6 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,1998,FEB,297.2,STATISTICAL_EXTREME,INFO,Rainfall (297.2 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,1998,Jan-Feb,372.2,STATISTICAL_EXTREME,INFO,Rainfall (372.2 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,2003,FEB,267.2,STATISTICAL_EXTREME,INFO,Rainfall (267.2 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,2005,FEB,403.5,STATISTICAL_EXTREME,INFO,Rainfall (403.5 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,2005,JAN,296.0,STATISTICAL_EXTREME,INFO,Rainfall (296.0 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,2005,Jan-Feb,699.5,STATISTICAL_EXTREME,INFO,Rainfall (699.5 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+JAMMU & KASHMIR,2006,JAN,200.3,STATISTICAL_EXTREME,INFO,Rainfall (200.3 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+JAMMU & KASHMIR,2009,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+JAMMU & KASHMIR,2009,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+JAMMU & KASHMIR,2009,JUL,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUL is missing from historical record
+JAMMU & KASHMIR,2009,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+JAMMU & KASHMIR,2011,FEB,211.6,STATISTICAL_EXTREME,INFO,Rainfall (211.6 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+JAMMU & KASHMIR,2015,MAR,341.4,STATISTICAL_EXTREME,INFO,Rainfall (341.4 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+KERALA,1912,OCT,469.5,STATISTICAL_EXTREME,INFO,Rainfall (469.5 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+KERALA,1918,MAY,683.0,STATISTICAL_EXTREME,INFO,Rainfall (683.0 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+KERALA,1924,JUL,1526.5,STATISTICAL_EXTREME,INFO,Rainfall (1526.5 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+KERALA,1931,AUG,1199.2,STATISTICAL_EXTREME,INFO,Rainfall (1199.2 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+KERALA,1932,OCT,543.2,STATISTICAL_EXTREME,INFO,Rainfall (543.2 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+KERALA,1933,MAY,738.8,STATISTICAL_EXTREME,INFO,Rainfall (738.8 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+KERALA,1962,OCT,475.6,STATISTICAL_EXTREME,INFO,Rainfall (475.6 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+KERALA,1977,NOV,361.7,STATISTICAL_EXTREME,INFO,Rainfall (361.7 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+KERALA,1978,NOV,365.6,STATISTICAL_EXTREME,INFO,Rainfall (365.6 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+KERALA,1999,OCT,567.9,STATISTICAL_EXTREME,INFO,Rainfall (567.9 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+KERALA,2002,OCT,511.7,STATISTICAL_EXTREME,INFO,Rainfall (511.7 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+KONKAN & GOA,1923,JUL,1643.9,STATISTICAL_EXTREME,INFO,Rainfall (1643.9 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+KONKAN & GOA,1926,AUG,1149.6,STATISTICAL_EXTREME,INFO,Rainfall (1149.6 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+KONKAN & GOA,1931,JUL,1867.2,STATISTICAL_EXTREME,INFO,Rainfall (1867.2 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+KONKAN & GOA,1931,OCT,458.9,STATISTICAL_EXTREME,INFO,Rainfall (458.9 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+KONKAN & GOA,1938,JUN,1118.1,STATISTICAL_EXTREME,INFO,Rainfall (1118.1 mm) exceeds 99.5th national percentile (1111.5 mm); valid extreme event retained
+KONKAN & GOA,1949,SEP,782.3,STATISTICAL_EXTREME,INFO,Rainfall (782.3 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+KONKAN & GOA,1950,SEP,777.5,STATISTICAL_EXTREME,INFO,Rainfall (777.5 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+KONKAN & GOA,1954,Jun-Sep,3715.7,STATISTICAL_EXTREME,INFO,Rainfall (3715.7 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+KONKAN & GOA,1954,SEP,750.7,STATISTICAL_EXTREME,INFO,Rainfall (750.7 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+KONKAN & GOA,1955,AUG,1299.8,STATISTICAL_EXTREME,INFO,Rainfall (1299.8 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+KONKAN & GOA,1958,AUG,1177.9,STATISTICAL_EXTREME,INFO,Rainfall (1177.9 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+KONKAN & GOA,1958,Jun-Sep,3886.3,STATISTICAL_EXTREME,INFO,Rainfall (3886.3 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+KONKAN & GOA,1961,JUL,1543.3,STATISTICAL_EXTREME,INFO,Rainfall (1543.3 mm) exceeds 99.5th national percentile (1497.6 mm); valid extreme event retained
+KONKAN & GOA,1963,AUG,1414.7,STATISTICAL_EXTREME,INFO,Rainfall (1414.7 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+KONKAN & GOA,1970,AUG,1164.8,STATISTICAL_EXTREME,INFO,Rainfall (1164.8 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+KONKAN & GOA,1983,AUG,1331.2,STATISTICAL_EXTREME,INFO,Rainfall (1331.2 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+KONKAN & GOA,1983,Jun-Sep,3698.6,STATISTICAL_EXTREME,INFO,Rainfall (3698.6 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+KONKAN & GOA,1990,AUG,1164.2,STATISTICAL_EXTREME,INFO,Rainfall (1164.2 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+KONKAN & GOA,2011,Jun-Sep,3697.3,STATISTICAL_EXTREME,INFO,Rainfall (3697.3 mm) exceeds 99.5th national percentile (3565.2 mm); valid extreme event retained
+LAKSHADWEEP,1903,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1903,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+LAKSHADWEEP,1903,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+LAKSHADWEEP,1917,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1917,APR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for APR is missing from historical record
+LAKSHADWEEP,1917,AUG,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for AUG is missing from historical record
+LAKSHADWEEP,1917,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+LAKSHADWEEP,1917,JAN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JAN is missing from historical record
+LAKSHADWEEP,1917,JUL,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUL is missing from historical record
+LAKSHADWEEP,1917,JUN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUN is missing from historical record
+LAKSHADWEEP,1917,MAR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAR is missing from historical record
+LAKSHADWEEP,1917,MAY,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAY is missing from historical record
+LAKSHADWEEP,1917,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+LAKSHADWEEP,1917,OCT,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for OCT is missing from historical record
+LAKSHADWEEP,1917,SEP,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for SEP is missing from historical record
+LAKSHADWEEP,1920,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1920,FEB,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for FEB is missing from historical record
+LAKSHADWEEP,1920,NOV,359.6,STATISTICAL_EXTREME,INFO,Rainfall (359.6 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+LAKSHADWEEP,1921,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1921,SEP,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for SEP is missing from historical record
+LAKSHADWEEP,1926,JAN,262.8,STATISTICAL_EXTREME,INFO,Rainfall (262.8 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+LAKSHADWEEP,1927,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1927,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+LAKSHADWEEP,1927,JUL,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUL is missing from historical record
+LAKSHADWEEP,1927,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+LAKSHADWEEP,1927,OCT,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for OCT is missing from historical record
+LAKSHADWEEP,1928,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1928,MAR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAR is missing from historical record
+LAKSHADWEEP,1929,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1929,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+LAKSHADWEEP,1931,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1931,JAN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JAN is missing from historical record
+LAKSHADWEEP,1933,MAY,660.8,STATISTICAL_EXTREME,INFO,Rainfall (660.8 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+LAKSHADWEEP,1943,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1943,APR,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for APR is missing from historical record
+LAKSHADWEEP,1946,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1946,AUG,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for AUG is missing from historical record
+LAKSHADWEEP,1946,DEC,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for DEC is missing from historical record
+LAKSHADWEEP,1946,JUL,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUL is missing from historical record
+LAKSHADWEEP,1946,JUN,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for JUN is missing from historical record
+LAKSHADWEEP,1946,MAY,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for MAY is missing from historical record
+LAKSHADWEEP,1946,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+LAKSHADWEEP,1946,OCT,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for OCT is missing from historical record
+LAKSHADWEEP,1946,SEP,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for SEP is missing from historical record
+LAKSHADWEEP,1949,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+LAKSHADWEEP,1949,NOV,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for NOV is missing from historical record
+LAKSHADWEEP,1953,OCT,452.4,STATISTICAL_EXTREME,INFO,Rainfall (452.4 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+LAKSHADWEEP,1965,DEC,320.6,STATISTICAL_EXTREME,INFO,Rainfall (320.6 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+LAKSHADWEEP,1979,NOV,378.1,STATISTICAL_EXTREME,INFO,Rainfall (378.1 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+NAGA MANI MIZO TRIPURA,1905,MAR,306.5,STATISTICAL_EXTREME,INFO,Rainfall (306.5 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+NAGA MANI MIZO TRIPURA,1920,MAR,272.7,STATISTICAL_EXTREME,INFO,Rainfall (272.7 mm) exceeds 99.5th national percentile (260.1 mm); valid extreme event retained
+NAGA MANI MIZO TRIPURA,1969,AUG,1347.2,STATISTICAL_EXTREME,INFO,Rainfall (1347.2 mm) exceeds 99.5th national percentile (1095.1 mm); valid extreme event retained
+NAGA MANI MIZO TRIPURA,1970,FEB,306.3,STATISTICAL_EXTREME,INFO,Rainfall (306.3 mm) exceeds 99.5th national percentile (196.6 mm); valid extreme event retained
+NAGA MANI MIZO TRIPURA,1970,Jan-Feb,352.1,STATISTICAL_EXTREME,INFO,Rainfall (352.1 mm) exceeds 99.5th national percentile (311.3 mm); valid extreme event retained
+NAGA MANI MIZO TRIPURA,1977,APR,383.8,STATISTICAL_EXTREME,INFO,Rainfall (383.8 mm) exceeds 99.5th national percentile (374.9 mm); valid extreme event retained
+NAGA MANI MIZO TRIPURA,1984,MAY,743.0,STATISTICAL_EXTREME,INFO,Rainfall (743.0 mm) exceeds 99.5th national percentile (649.1 mm); valid extreme event retained
+RAYALSEEMA,2015,NOV,383.8,STATISTICAL_EXTREME,INFO,Rainfall (383.8 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+SUB HIMALAYAN WEST BENGAL & SIKKIM,1902,SEP,799.9,STATISTICAL_EXTREME,INFO,Rainfall (799.9 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+SUB HIMALAYAN WEST BENGAL & SIKKIM,1920,SEP,788.8,STATISTICAL_EXTREME,INFO,Rainfall (788.8 mm) exceeds 99.5th national percentile (712.1 mm); valid extreme event retained
+SUB HIMALAYAN WEST BENGAL & SIKKIM,1929,OCT,513.5,STATISTICAL_EXTREME,INFO,Rainfall (513.5 mm) exceeds 99.5th national percentile (452.0 mm); valid extreme event retained
+TAMIL NADU,1920,NOV,404.9,STATISTICAL_EXTREME,INFO,Rainfall (404.9 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+TAMIL NADU,1931,DEC,295.8,STATISTICAL_EXTREME,INFO,Rainfall (295.8 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+TAMIL NADU,1940,NOV,367.8,STATISTICAL_EXTREME,INFO,Rainfall (367.8 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+TAMIL NADU,1946,DEC,273.5,STATISTICAL_EXTREME,INFO,Rainfall (273.5 mm) exceeds 99.5th national percentile (259.3 mm); valid extreme event retained
+TAMIL NADU,1979,NOV,416.7,STATISTICAL_EXTREME,INFO,Rainfall (416.7 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+TAMIL NADU,2015,NOV,379.8,STATISTICAL_EXTREME,INFO,Rainfall (379.8 mm) exceeds 99.5th national percentile (358.5 mm); valid extreme event retained
+UTTARAKHAND,1911,JAN,211.4,STATISTICAL_EXTREME,INFO,Rainfall (211.4 mm) exceeds 99.5th national percentile (186.5 mm); valid extreme event retained
+WEST MADHYA PRADESH,2000,ANNUAL,NA,MISSING_ANNUAL_TOTAL,WARNING,Reported annual rainfall is missing in source data
+WEST MADHYA PRADESH,2000,FEB,NA,MISSING_MONTHLY_OBSERVATION,WARNING,Monthly rainfall for FEB is missing from historical record
