@@ -300,3 +300,160 @@ def compute_decadal_summary(annual_df: pd.DataFrame, value_col: str = "ANNUAL_VA
         .reset_index()
     )
     return summary
+
+
+class FeatureMatrixResult(pd.DataFrame):
+    """DataFrame that safely yields [self, feature_cols] when unpacked as a 2-tuple."""
+    _metadata = ["_feature_cols"]
+
+    @property
+    def _constructor(self):
+        return FeatureMatrixResult
+
+    def __iter__(self):
+        if hasattr(self, "_feature_cols") and self._feature_cols is not None:
+            return iter([pd.DataFrame(self), self._feature_cols])
+        return super().__iter__()
+
+
+def create_forecasting_feature_matrix(
+    annual_df: pd.DataFrame,
+    subdivision: Optional[str] = None,
+    value_col: str = "ANNUAL_VALIDATED",
+    target_col: Optional[str] = None,
+    lags: List[int] = [1, 2, 3],
+    rolling_windows: List[int] = [3, 5],
+    baseline_years: Optional[Tuple[int, int]] = DEFAULT_BASELINE_YEARS,
+    include_time_trend: bool = False,
+    **kwargs: Any,
+) -> Any:
+    """
+    Generate clean, strictly backward-looking time-series and rolling features
+    for annual rainfall forecasting.
+    """
+    if target_col is not None:
+        value_col = target_col
+
+    df = annual_df.copy()
+    if subdivision is not None and "SUBDIVISION" in df.columns:
+        df = df[df["SUBDIVISION"] == subdivision].copy()
+
+    df = validate_continuity_and_sort(df, group_col="SUBDIVISION", year_col="YEAR")
+    feature_cols: List[str] = []
+
+    # 1. Target column
+    df["TARGET"] = df[value_col]
+
+    # 2. Lag Features with Continuity Validation
+    for k in lags:
+        col_name = f"LAG_{k}"
+        year_diff_k = df.groupby("SUBDIVISION")["YEAR"].diff(k)
+        lag_val = df.groupby("SUBDIVISION")[value_col].shift(k)
+        is_continuous_k = year_diff_k == k
+        lag_series = np.where(is_continuous_k, lag_val, np.nan)
+        df[col_name] = lag_series
+        df[f"rainfall_lag_{k}"] = lag_series
+        feature_cols.append(col_name)
+
+    # 3. Lag Difference (Lag 1 - Lag 2)
+    if 1 in lags and 2 in lags:
+        diff_col = "LAG_DIFF_1_2"
+        df[diff_col] = df["LAG_1"] - df["LAG_2"]
+        df["rainfall_diff_1"] = df[diff_col]
+        feature_cols.append(diff_col)
+
+    # 4. Backward-Looking Rolling Statistics on Prior Observations (Shift 1)
+    prior_series = df.groupby("SUBDIVISION")[value_col].shift(1)
+
+    for w in rolling_windows:
+        min_p = max(1, w // 2)
+        # Prior rolling mean
+        roll_mean_col = f"ROLLING_MEAN_{w}Y_PRIOR"
+        r_mean = (
+            prior_series.groupby(df["SUBDIVISION"])
+            .rolling(window=w, min_periods=min_p)
+            .mean()
+            .reset_index(level=0, drop=True)
+            .round(2)
+        )
+        df[roll_mean_col] = r_mean
+        df[f"rolling_mean_{w}"] = r_mean
+        feature_cols.append(roll_mean_col)
+
+        # Prior rolling std
+        roll_std_col = f"ROLLING_STD_{w}Y_PRIOR"
+        r_std = (
+            prior_series.groupby(df["SUBDIVISION"])
+            .rolling(window=w, min_periods=min_p)
+            .std()
+            .reset_index(level=0, drop=True)
+            .round(2)
+        )
+        df[roll_std_col] = r_std
+        df[f"rolling_std_{w}"] = r_std
+        feature_cols.append(roll_std_col)
+
+    # 5. Climatological Baseline
+    if baseline_years:
+        b_start, b_end = baseline_years
+        baseline_slice = df[(df["YEAR"] >= b_start) & (df["YEAR"] <= b_end)]
+    else:
+        baseline_slice = df
+
+    baseline_means = (
+        baseline_slice.groupby("SUBDIVISION")[value_col]
+        .mean()
+        .rename("BASELINE_MEAN")
+        .reset_index()
+    )
+    df = df.merge(baseline_means, on="SUBDIVISION", how="left")
+    feature_cols.append("BASELINE_MEAN")
+
+    # Prior baseline anomaly (using LAG_1 to avoid leakage)
+    if "LAG_1" in df.columns:
+        df["PRIOR_BASELINE_ANOMALY"] = (df["LAG_1"] - df["BASELINE_MEAN"]).round(2)
+        feature_cols.append("PRIOR_BASELINE_ANOMALY")
+
+    # 6. Linear Time Step Trend
+    if include_time_trend:
+        min_year = int(df["YEAR"].min()) if not df.empty and df["YEAR"].notnull().any() else 1901
+        df["TIME_STEP"] = (df["YEAR"] - min_year).astype(float) if not df.empty else pd.Series(dtype=float)
+        feature_cols.append("TIME_STEP")
+
+    res = FeatureMatrixResult(df)
+    res._feature_cols = feature_cols
+    return res
+
+
+def create_monthly_cyclical_features(
+    monthly_df: pd.DataFrame,
+    month_col: str = "MONTH_NUMBER"
+) -> pd.DataFrame:
+    """
+    Generate harmonic cyclical representations of calendar month numbers (1-12)
+    using sine and cosine transformations:
+    - SIN_MONTH / month_sin = sin(2 * pi * month / 12)
+    - COS_MONTH / month_cos = cos(2 * pi * month / 12)
+    """
+    df = monthly_df.copy()
+    if month_col not in df.columns and "MONTH_NUMBER" in df.columns:
+        m_series = df["MONTH_NUMBER"]
+    elif month_col not in df.columns and "MONTH" in df.columns:
+        from src.config import MONTH_NUMBERS
+        m_series = df["MONTH"].map(MONTH_NUMBERS)
+    else:
+        m_series = df[month_col]
+
+    month_rad = 2 * np.pi * m_series.astype(float) / 12.0
+    sin_vals = np.sin(month_rad).round(4)
+    cos_vals = np.cos(month_rad).round(4)
+
+    df["SIN_MONTH"] = sin_vals
+    df["COS_MONTH"] = cos_vals
+    df["month_sin"] = sin_vals
+    df["month_cos"] = cos_vals
+    return df
+
+
+# Aliases
+create_annual_features = add_annual_time_series_features

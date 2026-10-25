@@ -45,6 +45,21 @@ PREPROCESSING_REPORT_PATH: Path = REPORTS_DIR / "preprocessing_report.md"
 VALIDATION_REPORT_PATH: Path = REPORTS_DIR / "validation_report.md"
 DATA_QUALITY_SUMMARY_PATH: Path = REPORTS_DIR / "data_quality_summary.csv"
 EDA_REPORT_PATH: Path = REPORTS_DIR / "eda_report.md"
+ANOMALY_REPORT_PATH: Path = REPORTS_DIR / "anomaly_detection_report.md"
+CHANGE_POINT_REPORT_PATH: Path = REPORTS_DIR / "change_point_analysis_report.md"
+FORECASTING_REPORT_PATH: Path = REPORTS_DIR / "forecasting_report.md"
+MODEL_EVALUATION_REPORT_PATH: Path = REPORTS_DIR / "model_evaluation_report.md"
+BACKEND_ARCHITECTURE_REPORT_PATH: Path = REPORTS_DIR / "backend_architecture.md"
+
+# -----------------------------------------------------------------------------
+# Backend and Modeling Parameters
+# -----------------------------------------------------------------------------
+DEFAULT_TRAIN_END_YEAR: int = 1990
+DEFAULT_FORECAST_HORIZON: int = 5
+ANOMALY_Z_SCORE_THRESHOLD: float = 2.0
+ANOMALY_IQR_MULTIPLIER: float = 1.5
+ANOMALY_IFOREST_CONTAMINATION: float = 0.05
+CHANGE_POINT_P_VALUE_THRESHOLD: float = 0.05
 
 # -----------------------------------------------------------------------------
 # Column Schemas and Mappings
