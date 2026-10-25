@@ -1,0 +1,56 @@
+{
+  "source_platform": "Open Government Data (OGD) Platform India",
+  "platform_url": "https://data.gov.in/",
+  "publisher_claimed": "India Meteorological Department (IMD), Ministry of Earth Sciences, Government of India",
+  "license": "Government Open Data License - India (GODL) / NDSAP",
+  "license_url": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+  "provenance_status": "Local cached dataset - provenance not independently verified",
+  "provenance_note": "This local dataset provides a sample for offline development and testing. Its provenance and exact correspondence to official IMD release archives have not been independently verified.",
+  "candidate_resources": {
+    "subdivision_rainfall": {
+      "title": "Subdivision-wise Monthly, Seasonal and Annual Rainfall in India",
+      "catalog_title": "Rainfall in India",
+      "catalog_url": "https://data.gov.in/catalog/rainfall-india",
+      "resource_id": "fb5e2a33-3e34-4087-83a1-f0e46f2748d0",
+      "api_endpoint": "https://api.data.gov.in/resource/fb5e2a33-3e34-4087-83a1-f0e46f2748d0",
+      "verification_status": "Unverified candidate endpoint - schema and field mappings subject to data.gov.in API changes",
+      "units": "Millimeters (mm)"
+    },
+    "all_india_rainfall": {
+      "title": "All India Area Weighted Monthly, Seasonal And Annual Rainfall (in mm)",
+      "catalog_title": "All India Area Weighted Monthly, Seasonal And Annual Rainfall",
+      "catalog_url": "https://data.gov.in/catalog/all-india-area-weighted-monthly-seasonal-and-annual-rainfall-mm",
+      "resource_id": "7146eb85-c33f-4436-b75a-25dad6ea9d8a",
+      "api_endpoint": "https://api.data.gov.in/resource/7146eb85-c33f-4436-b75a-25dad6ea9d8a",
+      "verification_status": "Unverified candidate endpoint",
+      "units": "Millimeters (mm)"
+    }
+  },
+  "cached_data_properties": {
+    "subdivisions_count": 36,
+    "observed_year_range": [2016, 2023],
+    "units": "Millimeters (mm)",
+    "source_update_date": "Not available in offline cache"
+  },
+  "schema": {
+    "SUBDIVISION": "Name of the standard meteorological subdivision (string)",
+    "YEAR": "Calendar year of observation (integer)",
+    "JAN": "January total rainfall in mm (float)",
+    "FEB": "February total rainfall in mm (float)",
+    "MAR": "March total rainfall in mm (float)",
+    "APR": "April total rainfall in mm (float)",
+    "MAY": "May total rainfall in mm (float)",
+    "JUN": "June total rainfall in mm (float)",
+    "JUL": "July total rainfall in mm (float)",
+    "AUG": "August total rainfall in mm (float)",
+    "SEP": "September total rainfall in mm (float)",
+    "OCT": "October total rainfall in mm (float)",
+    "NOV": "November total rainfall in mm (float)",
+    "DEC": "December total rainfall in mm (float)",
+    "ANNUAL": "Annual total rainfall in mm (float)",
+    "Jan-Feb": "Winter season rainfall in mm (float)",
+    "Mar-May": "Pre-monsoon season rainfall in mm (float)",
+    "Jun-Sep": "Southwest monsoon season rainfall in mm (float)",
+    "Oct-Dec": "Post-monsoon season rainfall in mm (float)"
+  }
+}

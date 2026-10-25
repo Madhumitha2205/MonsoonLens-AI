@@ -917,3 +917,157 @@ def create_forecast_projection_plot(
         hovermode="x unified",
     )
     return fig
+
+
+def create_baseline_vs_recent_distribution_plot(
+    historical_series: pd.Series,
+    recent_value: Optional[float],
+    label: str = "Rainfall",
+    recent_year: Optional[int] = None,
+    unit: str = "mm",
+) -> go.Figure:
+    """
+    Create Plotly chart comparing historical baseline distribution (1901-2015)
+    with the recent observation.
+    """
+    fig = go.Figure()
+    s = historical_series.dropna()
+    if s.empty:
+        fig.update_layout(**PLOTLY_LAYOUT_DEFAULTS)
+        return fig
+
+    mean_hist = float(s.mean())
+
+    # Historical distribution histogram
+    fig.add_trace(
+        go.Histogram(
+            x=s,
+            nbinsx=28,
+            name="1901-2015 Baseline",
+            marker=dict(
+                color="rgba(37, 99, 235, 0.55)",
+                line=dict(color=COLOR_PRIMARY_BLUE, width=1),
+            ),
+            hovertemplate="<b>Rainfall Bin:</b> %{x} " + unit + "<br><b>Historical Count:</b> %{y} years<extra></extra>",
+        )
+    )
+
+    # Historical baseline mean vertical dashed line
+    fig.add_vline(
+        x=mean_hist,
+        line_width=2,
+        line_dash="dash",
+        line_color=COLOR_CYAN_ACCENT,
+        annotation_text=f"Normal Mean: {mean_hist:,.1f} {unit}",
+        annotation_position="top left",
+        annotation_font=dict(color=COLOR_CYAN_ACCENT, size=11),
+    )
+
+    # Recent observation vertical solid line and marker
+    if recent_value is not None and pd.notna(recent_value):
+        yr_str = f" ({recent_year})" if recent_year else ""
+        diff_pct = ((recent_value - mean_hist) / mean_hist) * 100 if mean_hist > 0 else 0
+        diff_sign = "+" if diff_pct >= 0 else ""
+
+        fig.add_vline(
+            x=recent_value,
+            line_width=3,
+            line_color=COLOR_AMBER_ACCENT,
+            annotation_text=f"Observed{yr_str}: {recent_value:,.1f} {unit} ({diff_sign}{diff_pct:.1f}%)",
+            annotation_position="top right",
+            annotation_font=dict(color=COLOR_AMBER_ACCENT, size=12, family="Arial Black"),
+        )
+
+    fig.update_layout(
+        **PLOTLY_LAYOUT_DEFAULTS,
+        title=dict(text=f"<b>Historical Baseline Distribution vs Recent Observation</b> - {label}", font=dict(size=16)),
+        xaxis_title=f"{label} ({unit})",
+        yaxis_title="Frequency (Years)",
+        height=420,
+        bargap=0.08,
+    )
+    return fig
+
+
+def create_departure_bar_chart(
+    comparison_df: pd.DataFrame,
+    title: str = "Subdivisional Rainfall Departure from Climatological Normal",
+    sort_ascending: bool = True,
+) -> go.Figure:
+    """
+    Create interactive horizontal bar chart of subdivisional departures,
+    colored by standard IMD departure categories.
+    Strictly filters to the 36 meteorological subdivisions (excludes ALL-INDIA).
+    """
+    fig = go.Figure()
+    if comparison_df.empty:
+        fig.update_layout(**PLOTLY_LAYOUT_DEFAULTS)
+        return fig
+
+    # Strictly exclude ALL-INDIA from the subdivisional ranking bar chart
+    plot_df = comparison_df[comparison_df["SUBDIVISION"] != "ALL-INDIA"].copy()
+    plot_df = plot_df.sort_values(by="PERCENTAGE_DEPARTURE", ascending=sort_ascending)
+
+    # Color mapping according to IMD category
+    cat_colors = {
+        "LARGE_EXCESS": "#1d4ed8",
+        "EXCESS": "#0284c7",
+        "NORMAL": "#10b981",
+        "DEFICIENT": "#f59e0b",
+        "LARGE_DEFICIENT": "#ef4444",
+        "NO_RAIN": "#64748b",
+        "MISSING": "#94a3b8",
+        "UNKNOWN": "#94a3b8",
+    }
+
+    colors = [cat_colors.get(cat, "#94a3b8") for cat in plot_df["IMD_CATEGORY"]]
+
+    hover_text = []
+    for _, row in plot_df.iterrows():
+        rec_str = f"{row['RECENT_RAINFALL']:.1f} mm" if pd.notna(row['RECENT_RAINFALL']) else "Missing (NaN)"
+        mean_str = f"{row['BASELINE_MEAN']:.1f} mm" if pd.notna(row['BASELINE_MEAN']) else "N/A"
+        dep_str = (
+            f"{row['ABSOLUTE_DEPARTURE_MM']:+.1f} mm ({row['PERCENTAGE_DEPARTURE']:+.1f}%)"
+            if pd.notna(row['ABSOLUTE_DEPARTURE_MM']) and pd.notna(row['PERCENTAGE_DEPARTURE'])
+            else "N/A"
+        )
+        rank_str = f"{row['PERCENTILE_RANK']:.1f}th" if pd.notna(row['PERCENTILE_RANK']) else "N/A"
+        hover_text.append(
+            f"<b>{row['SUBDIVISION']}</b><br>"
+            f"<b>Observed:</b> {rec_str}<br>"
+            f"<b>Normal (Mean):</b> {mean_str}<br>"
+            f"<b>Departure:</b> {dep_str}<br>"
+            f"<b>Category:</b> {row.get('CATEGORY_LABEL', 'Unknown')}<br>"
+            f"<b>Percentile:</b> {rank_str}"
+        )
+
+    fig.add_trace(
+        go.Bar(
+            x=plot_df["PERCENTAGE_DEPARTURE"],
+            y=plot_df["SUBDIVISION"],
+            orientation="h",
+            marker=dict(color=colors, line=dict(color="#0f172a", width=0.5)),
+            hovertext=hover_text,
+            hoverinfo="text",
+            name="Departure %",
+        )
+    )
+
+    # Reference dashed threshold lines
+    fig.add_vline(x=0, line_width=1.5, line_color="#FFFFFF", opacity=0.8)
+    fig.add_vline(x=20, line_width=1, line_dash="dot", line_color="#0284c7", opacity=0.7)
+    fig.add_vline(x=-20, line_width=1, line_dash="dot", line_color="#f59e0b", opacity=0.7)
+    fig.add_vline(x=60, line_width=1, line_dash="dash", line_color="#1d4ed8", opacity=0.7)
+    fig.add_vline(x=-60, line_width=1, line_dash="dash", line_color="#ef4444", opacity=0.7)
+
+    layout = PLOTLY_LAYOUT_DEFAULTS.copy()
+    layout["margin"] = dict(l=220, r=30, t=50, b=40)
+
+    fig.update_layout(
+        **layout,
+        title=dict(text=f"<b>{title}</b>", font=dict(size=16)),
+        xaxis_title="Departure from Climatological Normal (%)",
+        yaxis_title="Subdivision",
+        height=max(550, len(plot_df) * 22),
+    )
+    return fig
