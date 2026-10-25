@@ -28,6 +28,7 @@ from src.config import (
     EDA_REPORT_PATH,
     FIGURES_DIR,
     FORECASTING_REPORT_PATH,
+    HISTORICAL_RECENT_REPORT_PATH,
     METADATA_PATH,
     MODEL_EVALUATION_REPORT_PATH,
     MONTHLY_LONG_PATH,
@@ -260,6 +261,7 @@ with tab_reports:
 
     report_file_map = {
         "Exploratory Data Analysis Report (Stage 2)": EDA_REPORT_PATH,
+        "Historical vs Recent Rainfall Monitor Report": HISTORICAL_RECENT_REPORT_PATH,
         "Anomaly Detection Research Report": ANOMALY_REPORT_PATH,
         "Change-Point Analysis Research Report": CHANGE_POINT_REPORT_PATH,
         "Rainfall Forecasting Pipeline Report": FORECASTING_REPORT_PATH,

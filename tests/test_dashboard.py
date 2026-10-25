@@ -21,6 +21,8 @@ if str(PROJECT_ROOT) not in sys.path:
 from src.dashboard_utils import (
     compute_filtered_summary,
     create_annual_timeseries_plot,
+    create_baseline_vs_recent_distribution_plot,
+    create_departure_bar_chart,
     create_monthly_climatology_plot,
     create_rainfall_heatmap,
     create_seasonal_breakdown_plot,
@@ -236,6 +238,35 @@ class TestPlotGenerators(unittest.TestCase):
             "RAINFALL": [10.0, 20.0, 30.0, 40.0],
         })
         fig = create_rainfall_heatmap(df, "YEAR", "MONTH", "RAINFALL")
+        self.assertIsInstance(fig, go.Figure)
+        self.assertEqual(len(fig.data), 1)
+
+    def test_create_baseline_vs_recent_distribution_plot(self):
+        s = pd.Series([100.0, 200.0, 300.0, 400.0])
+        fig = create_baseline_vs_recent_distribution_plot(
+            historical_series=s,
+            recent_value=250.0,
+            label="Test Distribution",
+            recent_year=2020,
+        )
+        self.assertIsInstance(fig, go.Figure)
+        self.assertGreater(len(fig.data), 0)
+
+    def test_create_departure_bar_chart(self):
+        comp_df = pd.DataFrame([
+            {
+                "SUBDIVISION": "BIHAR",
+                "RECENT_RAINFALL": 1100.0,
+                "BASELINE_MEAN": 1000.0,
+                "ABSOLUTE_DEPARTURE_MM": 100.0,
+                "PERCENTAGE_DEPARTURE": 10.0,
+                "Z_SCORE": 0.5,
+                "PERCENTILE_RANK": 60.0,
+                "IMD_CATEGORY": "NORMAL",
+                "CATEGORY_LABEL": "Normal",
+            }
+        ])
+        fig = create_departure_bar_chart(comp_df, title="Test Departure")
         self.assertIsInstance(fig, go.Figure)
         self.assertEqual(len(fig.data), 1)
 

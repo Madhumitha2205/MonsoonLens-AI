@@ -13,24 +13,31 @@ MonsoonLens-AI/
 │   ├── 1_Rainfall_Explorer.py                     # Deep-dive interactive slice & filter explorer
 │   ├── 2_Regional_Analysis.py                     # Subdivisional rankings, CV%, & multi-region comparisons
 │   ├── 3_Seasonal_Insights.py                     # 4-season dynamics, monsoon share, & correlation matrix
-│   ├── 4_Data_Quality_and_Reports.py              # Quality audit logs, 8 research reports, & download center
-│   └── 5_Advanced_Analytics.py                    # Anomalies, Pettitt/CUSUM regime shifts, & ML forecasting
+│   ├── 4_Data_Quality_and_Reports.py              # Quality audit logs, 9 research reports, & download center
+│   ├── 5_Advanced_Analytics.py                    # Anomalies, Pettitt/CUSUM regime shifts, & ML forecasting
+│   └── 6_Historical_vs_Recent_Monitor.py          # Real-time/cached OGD data.gov.in benchmark monitor
 ├── .streamlit/
 │   └── config.toml                                # Theme configuration (dark navy, cyan accents)
 ├── data/
 │   ├── raw/
 │   │   └── rainfall_area-wt_sd_1901-2015.csv      # Original raw dataset (strictly read-only)
-│   └── processed/
-│       ├── cleaned_wide.csv                       # Standardized wide dataset with quality flags
-│       ├── monthly_rainfall_long.csv              # Tidy monthly time-series (49,392 records)
-│       ├── annual_rainfall.csv                    # Annual series (source, calculated, validated)
-│       ├── seasonal_rainfall.csv                  # Tidy seasonal series (16,464 records)
-│       ├── quality_flags.csv                      # Granular audit log of missing & extreme values
-│       └── dataset_metadata.json                  # Machine-readable metadata & provenance
+│   ├── processed/
+│   │   ├── cleaned_wide.csv                       # Standardized wide dataset with quality flags
+│   │   ├── monthly_rainfall_long.csv              # Tidy monthly time-series (49,392 records)
+│   │   ├── annual_rainfall.csv                    # Annual series (source, calculated, validated)
+│   │   ├── seasonal_rainfall.csv                  # Tidy seasonal series (16,464 records)
+│   │   ├── quality_flags.csv                      # Granular audit log of missing & extreme values
+│   │   └── dataset_metadata.json                  # Machine-readable metadata & provenance
+│   └── external/
+│       ├── data_gov_in_subdivision_recent.csv     # Local cached dataset - provenance not independently verified (2016-2023)
+│       └── data_gov_in_metadata.json              # Provenance & candidate resource metadata
 ├── src/
 │   ├── __init__.py                                # Package marker
 │   ├── config.py                                  # Central configuration, schemas, thresholds & filepaths
 │   ├── data_loader.py                             # Non-mutating cached data access & schema validator
+│   ├── data_gov_in_client.py                      # Official data.gov.in REST client with offline fallback
+│   ├── recent_rainfall_adapter.py                 # Schema harmonizer & subdivision normalizer
+│   ├── historical_recent_comparator.py            # Baseline calculation, departure metrics & IMD categorization
 │   ├── dashboard_utils.py                         # Loaders, caching, Plotly chart generators, & UI components
 │   ├── inspect_data.py                            # Non-destructive exploratory dataset audit script
 │   ├── preprocess.py                              # Core reproducible preprocessing pipeline
@@ -54,7 +61,8 @@ MonsoonLens-AI/
 │   ├── change_point_analysis_report.md            # Structural break & regime shift research report
 │   ├── forecasting_report.md                      # Out-of-time forecasting benchmark report
 │   ├── model_evaluation_report.md                 # Metric comparison & model skill evaluation report
-│   └── backend_architecture.md                    # Engineering architecture & data flow documentation
+│   ├── backend_architecture.md                    # Engineering architecture & data flow documentation
+│   └── historical_recent_rainfall_monitor_report.md # Methodology & findings report for Recent Monitor
 ├── notebooks/
 │   └── 01_data_exploration.ipynb                 # Interactive visual exploration & diagnostic notebook
 ├── tests/
@@ -69,8 +77,11 @@ MonsoonLens-AI/
 │   ├── test_rainfall_forecasting.py               # Out-of-time forecasting pipeline tests
 │   ├── test_model_evaluation.py                   # Metric & benchmark skill score tests
 │   ├── test_rainfall_insights.py                  # Natural language narrative generation tests
-│   └── test_backend_pipeline.py                   # End-to-end backend orchestration tests
+│   ├── test_backend_pipeline.py                   # End-to-end backend orchestration tests
+│   ├── test_data_gov_in_client.py                 # Offline-mocked data.gov.in client tests
+│   └── test_historical_recent_comparator.py       # Baseline departure & IMD classification tests
 ├── requirements.txt                               # Project dependencies
+├── .env.example                                   # Environment template with DATA_GOV_IN_API_KEY
 ├── README.md                                      # Project guide and execution documentation
 └── .gitignore                                     # Version control exclusions
 ```
@@ -221,6 +232,15 @@ The **MonsoonLens AI** interactive frontend is a multi-page Streamlit analytical
    - **Tab 1: Anomaly Detection**: Compare Z-Score, IQR, and Isolation Forest algorithms; interactive scatter plot highlighting extreme wet and drought years; natural language anomaly summary.
    - **Tab 2: Regime Shifts & Change Points**: Pettitt's test, CUSUM, and SNHT step-shift identification; pre- and post-shift regime lines; Cohen's $d$ effect size; complete 36-subdivision overview table.
    - **Tab 3: Forecasting & Horizon Projection**: Out-of-time evaluation (1996–2015) across baselines and Random Forest; Forecast Skill Score vs. Historical Mean; 1–10 year horizon projections with 95% empirical prediction intervals.
+
+7. **Historical vs Recent Rainfall Monitor (`pages/6_Historical_vs_Recent_Monitor.py`)**:
+   - **Open Government Data (data.gov.in) Integration**: Dual-mode architecture querying live REST endpoints when `DATA_GOV_IN_API_KEY` is present, or gracefully utilizing a local cached dataset (provenance not independently verified) for offline development.
+   - **Climatological Baseline Benchmarking**: Real-time evaluation of recent observations against 115-year baseline distributions (1901-2015) across all 36 IMD subdivisions and the national aggregate.
+   - **National Aggregate Baseline Limitation**: Explicitly documents that the ALL-INDIA historical baseline is calculated as an unweighted subdivision mean, distinct from official IMD area-weighted totals.
+   - **Multi-Metric Departure Diagnostics**: Absolute deviation ($mm$), percentage departure ($\%$, with zero-division protection), standardized deviation ($z$-score), and historical percentile ranking.
+   - **Strict 36-Subdivision Ranking**: Separates the 36 canonical meteorological subdivisions from the national aggregate, ensuring regional rankings and category percentages are not distorted.
+   - **Standard IMD Classification**: Real-time categorical assignment into Large Excess ($\ge +60\%$), Excess ($+20\%$ to $+59\%$), Normal ($-19\%$ to $+19\%$), Deficient ($-20\%$ to $-59\%$), Large Deficient ($\le -60\%$), No Rain ($-100\%$), and Observation Missing (`NaN`).
+   - **Interactive Visualizations & Export Center**: Plotly baseline distribution vs recent observation curves, ranked 36-subdivision departure bar charts, and direct downloads for CSV data tables and Markdown summary reports.
 
 ---
 

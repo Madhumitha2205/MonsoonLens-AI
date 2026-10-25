@@ -37,6 +37,8 @@ desktop.ini
 # Environment Variables and Credentials
 .env
 .env.*
+!.env.example
+.streamlit/secrets.toml
 *.secret
 *.pem
 *.key

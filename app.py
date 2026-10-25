@@ -375,7 +375,7 @@ st.markdown(
 # -----------------------------------------------------------------------------
 st.subheader("🧭 Explore the Dashboard Pages")
 
-nav_col1, nav_col2, nav_col3, nav_col4, nav_col5 = st.columns(5)
+nav_col1, nav_col2, nav_col3, nav_col4, nav_col5, nav_col6 = st.columns(6)
 
 with nav_col1:
     st.markdown(
@@ -441,6 +441,20 @@ with nav_col5:
             <h4 style="color: {COLOR_CYAN_ACCENT}; margin: 0 0 8px 0;">Advanced Analytics</h4>
             <p style="color: {COLOR_MUTED_SLATE}; font-size: 0.85rem; margin-bottom: 12px;">
                 Anomaly detection (IQR/Z-Score/IForest), Pettitt/CUSUM regime shifts, and ML forecasting horizons.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+with nav_col6:
+    st.markdown(
+        f"""
+        <div class="dashboard-card" style="text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 8px;">📡</div>
+            <h4 style="color: {COLOR_GREEN_ACCENT}; margin: 0 0 8px 0;">Recent Monitor</h4>
+            <p style="color: {COLOR_MUTED_SLATE}; font-size: 0.85rem; margin-bottom: 12px;">
+                Benchmark official data.gov.in (IMD) recent observations against 115-year baselines with IMD categories.
             </p>
         </div>
         """,
