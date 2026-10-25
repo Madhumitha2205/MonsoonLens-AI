@@ -1,6 +1,6 @@
 # MonsoonLens AI: Historical Rainfall Pattern Analysis
 
-**MonsoonLens AI** is a machine learning and data science system designed to investigate historical rainfall patterns across India's 36 meteorological subdivisions (1901–2015). It provides rigorous, reproducible data preprocessing, statistical anomaly detection, time-series feature engineering, and foundation datasets for climate trend analysis.
+**MonsoonLens AI** is an advanced machine learning and data science system designed to investigate historical rainfall patterns across India's 36 meteorological subdivisions (1901–2015). It provides rigorous, reproducible data preprocessing, statistical anomaly detection, non-parametric climate regime shift detection, leakage-free time-series forecasting, and an interactive 5-page Streamlit analytical dashboard.
 
 ---
 
@@ -13,7 +13,8 @@ MonsoonLens-AI/
 │   ├── 1_Rainfall_Explorer.py                     # Deep-dive interactive slice & filter explorer
 │   ├── 2_Regional_Analysis.py                     # Subdivisional rankings, CV%, & multi-region comparisons
 │   ├── 3_Seasonal_Insights.py                     # 4-season dynamics, monsoon share, & correlation matrix
-│   └── 4_Data_Quality_and_Reports.py              # Quality audit logs, report viewers, & download center
+│   ├── 4_Data_Quality_and_Reports.py              # Quality audit logs, 8 research reports, & download center
+│   └── 5_Advanced_Analytics.py                    # Anomalies, Pettitt/CUSUM regime shifts, & ML forecasting
 ├── .streamlit/
 │   └── config.toml                                # Theme configuration (dark navy, cyan accents)
 ├── data/
@@ -28,27 +29,47 @@ MonsoonLens-AI/
 │       └── dataset_metadata.json                  # Machine-readable metadata & provenance
 ├── src/
 │   ├── __init__.py                                # Package marker
-│   ├── config.py                                  # Central configuration, schemas & thresholds
+│   ├── config.py                                  # Central configuration, schemas, thresholds & filepaths
+│   ├── data_loader.py                             # Non-mutating cached data access & schema validator
 │   ├── dashboard_utils.py                         # Loaders, caching, Plotly chart generators, & UI components
 │   ├── inspect_data.py                            # Non-destructive exploratory dataset audit script
 │   ├── preprocess.py                              # Core reproducible preprocessing pipeline
 │   ├── validate_data.py                           # Post-processing validation & verification engine
-│   ├── feature_engineering.py                     # Leakage-free time-series & anomaly features
-│   └── eda_analysis.py                            # Comprehensive EDA analysis & figure generation
+│   ├── feature_engineering.py                     # Leakage-free lag, rolling, cyclical & trend features
+│   ├── eda_analysis.py                            # Comprehensive EDA analysis & figure generation
+│   ├── anomaly_detection.py                       # Multi-method anomaly detection (Z-score, IQR, Isolation Forest)
+│   ├── change_point_analysis.py                   # Non-parametric regime shift tests (Pettitt, CUSUM, SNHT)
+│   ├── rainfall_forecasting.py                    # Baselines & ML forecasting models with horizon projection
+│   ├── model_evaluation.py                        # Standardized metrics (MAE, RMSE, MAPE, R², Skill Score)
+│   ├── rainfall_insights.py                       # Natural language insight & climate narrative generation
+│   └── backend_pipeline.py                        # End-to-end orchestration pipeline & offline report generator
 ├── reports/
 │   ├── figures/                                   # 7 Publication-grade charts (trends, heatmaps, boxplots)
 │   ├── initial_data_quality_report.md             # Baseline raw dataset audit report
 │   ├── preprocessing_report.md                    # Comprehensive pipeline execution report
 │   ├── validation_report.md                       # Systematic PASS/FAIL validation report
 │   ├── data_quality_summary.csv                   # Tabular quality summary per column
-│   └── eda_report.md                              # Comprehensive Stage 2 EDA findings report
+│   ├── eda_report.md                              # Comprehensive Stage 2 EDA findings report
+│   ├── anomaly_detection_report.md                # Research report on historical rainfall extremes
+│   ├── change_point_analysis_report.md            # Structural break & regime shift research report
+│   ├── forecasting_report.md                      # Out-of-time forecasting benchmark report
+│   ├── model_evaluation_report.md                 # Metric comparison & model skill evaluation report
+│   └── backend_architecture.md                    # Engineering architecture & data flow documentation
 ├── notebooks/
 │   └── 01_data_exploration.ipynb                 # Interactive visual exploration & diagnostic notebook
 ├── tests/
-│   ├── test_preprocessing.py                      # Preprocessing test suite (15 unit/integration tests)
+│   ├── conftest.py                                # Pytest root path resolution
+│   ├── test_data_loader.py                        # Data loader immutability & schema tests
+│   ├── test_preprocessing.py                      # Preprocessing test suite (18 unit/integration tests)
 │   ├── test_eda.py                                # EDA calculation & figure test suite (7 tests)
-│   └── test_dashboard.py                          # Dashboard loaders, filtering & UI tests (20 tests)
-├── logs/                                          # Execution logs
+│   ├── test_dashboard.py                          # Dashboard loaders, filtering & UI tests (20 tests)
+│   ├── test_feature_engineering.py                # Temporal integrity & leakage prevention tests
+│   ├── test_anomaly_detection.py                  # Statistical & ML anomaly detection tests
+│   ├── test_change_point_analysis.py              # Pettitt, CUSUM, and SNHT change-point tests
+│   ├── test_rainfall_forecasting.py               # Out-of-time forecasting pipeline tests
+│   ├── test_model_evaluation.py                   # Metric & benchmark skill score tests
+│   ├── test_rainfall_insights.py                  # Natural language narrative generation tests
+│   └── test_backend_pipeline.py                   # End-to-end backend orchestration tests
 ├── requirements.txt                               # Project dependencies
 ├── README.md                                      # Project guide and execution documentation
 └── .gitignore                                     # Version control exclusions
@@ -74,7 +95,7 @@ pip install -r requirements.txt
 
 ---
 
-## 3. Execution Commands
+## 3. Pipeline Execution Commands
 
 Execute each stage of the pipeline using the exact commands below:
 
@@ -96,22 +117,22 @@ Performs 19 automated integrity checks (non-negativity, missingness preservation
 python src/validate_data.py
 ```
 
-### Step 4: Run the Preprocessing Unit Tests
-Executes 15 comprehensive unit and integration tests covering edge cases, synthetic error detection, group isolation, and continuity handling.
-```powershell
-python -m unittest tests/test_preprocessing.py -v
-```
-
-### Step 5: Run Stage 2 Exploratory Data Analysis (EDA)
+### Step 4: Run Stage 2 Exploratory Data Analysis (EDA)
 Computes national and subdivisional descriptive statistics, generates 7 publication-grade figures in `reports/figures/`, and outputs the comprehensive report `reports/eda_report.md`.
 ```powershell
 python src/eda_analysis.py
 ```
 
-### Step 6: Run All Automated Unit Tests (Preprocessing + EDA)
-Executes all 22 project unit and integration tests verifying both preprocessing integrity and EDA statistical calculations.
+### Step 5: Run the Complete Backend Pipeline
+Orchestrates anomaly detection across all 36 subdivisions, executes non-parametric change-point tests (Pettitt, CUSUM, SNHT), benchmarks baseline and ML forecasting models on an out-of-time test period (1996–2015), and generates 5 new research reports in `reports/`.
 ```powershell
-python -m unittest discover -s tests -p "test_*.py" -v
+python src/backend_pipeline.py
+```
+
+### Step 6: Run the Complete Automated Test Suite (77 Tests)
+Executes all 77 unit and integration tests across data loading, preprocessing, EDA, dashboard UI, feature engineering, anomaly detection, regime shift detection, forecasting, and evaluation.
+```powershell
+python -m pytest -v
 ```
 
 ### Step 7: Launch Interactive Exploration Notebook
@@ -147,14 +168,18 @@ All processed artifacts are written to `data/processed/`:
    Values exceeding the 99.5th percentile (e.g. Arunachal Pradesh in July 1948: 2,362.8 mm; Coastal Karnataka in Jun-Sep 1961: 4,536.9 mm) are verified historical weather phenomena, not data entry errors, and are fully preserved.
 4. **Time-Series Continuity Safeguard:**
    33 subdivisions possess 115 continuous years (1901–2015), while 3 subdivisions contain historical observation gaps (Andaman & Nicobar Islands missing WWII years 1943–1945, 1909, 1948; Arunachal Pradesh starting in 1916; Lakshadweep missing 1918). Feature engineering strictly validates year differences ($YEAR_t - YEAR_{t-1} == 1$) to prevent computing false lag differences across non-consecutive years.
-5. **Raw Data Immutability:**
+5. **Leakage-Free Feature Engineering:**
+   Prior-year lag features and rolling window statistics are strictly shifted ($t-1$) so that target year $t$ rainfall is never exposed during feature creation.
+6. **Honest Out-of-Time Forecasting & Benchmarks:**
+   Forecasting models are evaluated against an out-of-time test set (1996–2015) using chronological temporal splits rather than randomized splits. All ML models are rigorously benchmarked against standard climatological baselines (Historical Mean, Naive Persistence, 5-Year Trailing Rolling Mean) using Forecast Skill Scores.
+7. **Raw Data Immutability:**
    The raw dataset `data/raw/rainfall_area-wt_sd_1901-2015.csv` is accessed in read-only mode and is never overwritten or mutated.
 
 ---
 
 ## 6. Interactive Streamlit Web Dashboard
 
-The **MonsoonLens AI** interactive frontend is a multi-page Streamlit analytical web platform designed for exploring 115 years of meteorological observations, testing hypotheses, and auditing data quality.
+The **MonsoonLens AI** interactive frontend is a multi-page Streamlit analytical web platform designed for exploring 115 years of meteorological observations, detecting anomalies, analyzing regime shifts, and visualizing forecast scenarios.
 
 ### 6.1 Multi-Page Architecture
 
@@ -163,7 +188,7 @@ The **MonsoonLens AI** interactive frontend is a multi-page Streamlit analytical
    - All-India annual rainfall time series with 10-year rolling window and OLS trend fit.
    - Chronological monthly climatology distribution and percentage share.
    - Seasonal breakdown and Top-5 wettest vs. driest subdivision previews.
-   - Core empirical takeaways and scientific integrity callouts.
+   - Direct navigation cards to all 5 analytical subpages.
 
 2. **Interactive Rainfall Explorer (`pages/1_Rainfall_Explorer.py`)**:
    - Flexible multidimensional filtering: timeline slider (1901–2015), subdivision selector, month multiselect, and season selector.
@@ -188,10 +213,14 @@ The **MonsoonLens AI** interactive frontend is a multi-page Streamlit analytical
 5. **Data Quality, Audit Logs & Reports (`pages/4_Data_Quality_and_Reports.py`)**:
    - Complete inventory and file health check of all processed datasets and metadata.
    - Granular audit trail explorer for 453 recorded quality flags, filterable by flag type, severity, and subdivision.
-   - Machine-readable metadata viewer for `dataset_metadata.json`.
-   - In-app interactive Markdown viewers for Stage 1, Stage 2, and Validation reports.
-   - High-resolution static publication figure gallery (`reports/figures/`).
-   - Unified Research Artifact Download Center for all processed CSVs and reports.
+   - Interactive report viewer for all 8 research and architecture reports.
+   - Static publication figure gallery (`reports/figures/`).
+   - Unified Research Artifact Download Center for all CSVs and Markdown reports.
+
+6. **Advanced Analytics & ML Modeling (`pages/5_Advanced_Analytics.py`)**:
+   - **Tab 1: Anomaly Detection**: Compare Z-Score, IQR, and Isolation Forest algorithms; interactive scatter plot highlighting extreme wet and drought years; natural language anomaly summary.
+   - **Tab 2: Regime Shifts & Change Points**: Pettitt's test, CUSUM, and SNHT step-shift identification; pre- and post-shift regime lines; Cohen's $d$ effect size; complete 36-subdivision overview table.
+   - **Tab 3: Forecasting & Horizon Projection**: Out-of-time evaluation (1996–2015) across baselines and Random Forest; Forecast Skill Score vs. Historical Mean; 1–10 year horizon projections with 95% empirical prediction intervals.
 
 ---
 
@@ -202,8 +231,8 @@ Ensure Python 3.10+ is installed and your terminal is in the project root direct
 ### Quick Launch Commands:
 
 ```powershell
-# 1. Activate the project virtual environment
-.\.venv\Scripts\Activate.ps1
+# 1. Activate the project virtual environment (if using one)
+.\venv\Scripts\Activate.ps1
 
 # 2. Install / verify required dependencies
 python -m pip install -r requirements.txt
@@ -217,61 +246,48 @@ The application will start and automatically open in your default browser at:
 
 ### PowerShell Execution Policy Workaround
 
-If PowerShell displays an execution policy error when running `.\.venv\Scripts\Activate.ps1` (`File cannot be loaded because running scripts is disabled on this system`), use either of the following safe workarounds without altering machine-wide security policies:
+If PowerShell displays an execution policy error when running `.\.venv\Scripts\Activate.ps1` (`File cannot be loaded because running scripts is disabled on this system`), use either of the following safe workarounds:
 
 **Option A (Session-scoped bypass):**
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
+.\venv\Scripts\Activate.ps1
 python -m streamlit run app.py
 ```
 
 **Option B (Direct execution via virtual environment Python):**
 ```powershell
-.\.venv\Scripts\python.exe -m streamlit run app.py
+.\venv\Scripts\python.exe -m streamlit run app.py
 ```
 
 ---
 
 ## 8. Running the Complete Automated Test Suite
 
-MonsoonLens AI includes 42 automated unit and integration tests covering data preprocessing, feature engineering continuity safeguards, EDA statistical calculations, figure integrity, dashboard loaders, schema enforcement, filtering logic, and Plotly generators.
+MonsoonLens AI includes **77 automated unit and integration tests** covering data preprocessing, feature engineering continuity safeguards, EDA statistical calculations, figure integrity, dashboard loaders, schema enforcement, filtering logic, anomaly detection, change-point analysis, forecasting baselines, ML regressors, metric calculations, and natural language narrative generators.
 
 ```powershell
-# Run all 42 automated tests via pytest
-.\.venv\Scripts\pytest tests -v
+# Run all 77 automated tests via pytest
+python -m pytest -v
 ```
 
-All 42 tests should execute and report `PASSED`.
+All 77 tests execute and report `PASSED`:
+- `tests/test_data_loader.py` (7 tests)
+- `tests/test_preprocessing.py` (18 tests)
+- `tests/test_eda.py` (7 tests)
+- `tests/test_dashboard.py` (20 tests)
+- `tests/test_feature_engineering.py` (3 tests)
+- `tests/test_anomaly_detection.py` (5 tests)
+- `tests/test_change_point_analysis.py` (5 tests)
+- `tests/test_rainfall_forecasting.py` (5 tests)
+- `tests/test_model_evaluation.py` (4 tests)
+- `tests/test_rainfall_insights.py` (4 tests)
+- `tests/test_backend_pipeline.py` (2 tests)
 
 ---
 
-## 9. Future Deployment Guide
+## 9. Scientific Limitations and Operational Notice
 
-The frontend is fully container-ready and headless-configured via `.streamlit/config.toml`.
-
-### Streamlit Community Cloud
-1. Push the branch to GitHub.
-2. Connect your repository on [share.streamlit.io](https://share.streamlit.io).
-3. Set the main file path to `app.py`.
-4. Deploy! All processed datasets are checked into the repository and load instantly.
-
-### Docker Deployment
-Create a minimal `Dockerfile`:
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
-EXPOSE 8501
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
-```
-
----
-
-## 10. Scientific Limitations and Machine Learning Roadmap
-
-1. **Descriptive Empirical Analysis**: Current dashboard metrics reflect ground-truth historical rain-gauge observations. The application does not claim unvalidated future rainfall forecasting.
-2. **Missing Observations**: Historical gaps (e.g. WWII in Andaman & Nicobar) are preserved as `NaN` rather than synthetic values.
-3. **Machine Learning Extensions**: Feature matrices engineered in `src/feature_engineering.py` (lagged variables, rolling anomaly deviations, and change-point segments) will serve as foundation inputs for future Stage 3 predictive models and climate regime classification.
+1. **Empirical Historical Data**: Current dashboard metrics reflect ground-truth historical rain-gauge observations (1901–2015).
+2. **Missing Observations**: Historical observation gaps (e.g. WWII in Andaman & Nicobar) are strictly preserved as `NaN` rather than synthetic or zero-filled values.
+3. **Forecasting Uncertainty**: Multi-year precipitation forecasting in tropical monsoon systems is subject to chaotic ocean-atmosphere teleconnections (ENSO, IOD, MJO). Projections generated in this system quantify statistical trends, baseline momentum, and planning scenarios with 95% empirical prediction intervals — **not deterministic severe storm or flash flood warnings**.

@@ -672,3 +672,248 @@ def get_csv_download_button(df: pd.DataFrame, filename: str, label: str = "Downl
         file_name=filename,
         mime="text/csv",
     )
+
+
+def create_anomaly_scatter_plot(
+    df: pd.DataFrame,
+    value_col: str = "ANNUAL_VALIDATED",
+    anomaly_col: str = "is_anomaly",
+    subdivision_name: str = "",
+    method_name: str = "Anomaly",
+) -> go.Figure:
+    """Create interactive scatter and line plot highlighting detected anomaly years."""
+    fig = go.Figure()
+    if df.empty:
+        fig.update_layout(**PLOTLY_LAYOUT_DEFAULTS)
+        return fig
+
+    # Base line
+    fig.add_trace(
+        go.Scatter(
+            x=df["YEAR"],
+            y=df[value_col],
+            mode="lines",
+            line=dict(color=COLOR_MUTED_SLATE, width=1.5),
+            name="Observed Rainfall",
+            hoverinfo="skip",
+        )
+    )
+
+    # Normal points
+    normal_df = df[~df[anomaly_col]]
+    fig.add_trace(
+        go.Scatter(
+            x=normal_df["YEAR"],
+            y=normal_df[value_col],
+            mode="markers",
+            marker=dict(color=COLOR_PRIMARY_BLUE, size=6, opacity=0.7),
+            name="Normal Year",
+            hovertemplate="<b>Year:</b> %{x}<br><b>Rainfall:</b> %{y:,.1f} mm<extra></extra>",
+        )
+    )
+
+    # Anomalies
+    anomaly_df = df[df[anomaly_col]]
+    if not anomaly_df.empty:
+        hover_text = []
+        for _, row in anomaly_df.iterrows():
+            atype = row.get("anomaly_type", "Anomaly")
+            z = row.get("z_score", None)
+            score_str = f"<br><b>Z-Score:</b> {z:.2f}" if pd.notna(z) else ""
+            hover_text.append(
+                f"<b>Year:</b> {row['YEAR']}<br><b>Rainfall:</b> {row[value_col]:,.1f} mm<br><b>Category:</b> {atype}{score_str}<extra></extra>"
+            )
+
+        fig.add_trace(
+            go.Scatter(
+                x=anomaly_df["YEAR"],
+                y=anomaly_df[value_col],
+                mode="markers",
+                marker=dict(color=COLOR_ROSE_ACCENT, size=10, symbol="diamond", line=dict(color="#FFFFFF", width=1.5)),
+                name=f"{method_name} ({len(anomaly_df)})",
+                hovertext=hover_text,
+                hoverinfo="text",
+            )
+        )
+
+    title_text = f"<b>{method_name} Detection</b>"
+    if subdivision_name:
+        title_text += f" — {subdivision_name}"
+
+    fig.update_layout(
+        **PLOTLY_LAYOUT_DEFAULTS,
+        title=dict(text=title_text, font=dict(size=16)),
+        xaxis_title="Year",
+        yaxis_title="Annual Rainfall (mm)",
+        height=450,
+        hovermode="closest",
+    )
+    return fig
+
+
+def create_change_point_plot(
+    sub_df: pd.DataFrame,
+    cp_result: Dict[str, Any],
+    value_col: str = "ANNUAL_VALIDATED",
+) -> go.Figure:
+    """Create interactive plot visualizing Pettitt / CUSUM change point with regime shifts."""
+    fig = go.Figure()
+    if sub_df.empty:
+        fig.update_layout(**PLOTLY_LAYOUT_DEFAULTS)
+        return fig
+
+    sub_df = sub_df.sort_values(by="YEAR").dropna(subset=[value_col])
+
+    # Time series line
+    fig.add_trace(
+        go.Scatter(
+            x=sub_df["YEAR"],
+            y=sub_df[value_col],
+            mode="lines+markers",
+            line=dict(color=COLOR_PRIMARY_BLUE, width=2),
+            marker=dict(size=4, color=COLOR_CYAN_ACCENT),
+            name="Annual Rainfall",
+            hovertemplate="<b>Year:</b> %{x}<br><b>Rainfall:</b> %{y:,.1f} mm<extra></extra>",
+        )
+    )
+
+    cp_year = cp_result.get("change_point_year")
+    sub_name = cp_result.get("subdivision", "")
+    p_val = cp_result.get("p_value", 1.0)
+    sig = cp_result.get("is_significant", False)
+    mu_before = cp_result.get("mean_before")
+    mu_after = cp_result.get("mean_after")
+
+    if cp_year is not None and pd.notna(cp_year):
+        years_before = sub_df[sub_df["YEAR"] <= cp_year]["YEAR"]
+        years_after = sub_df[sub_df["YEAR"] > cp_year]["YEAR"]
+
+        if mu_before is not None and len(years_before) > 0:
+            fig.add_trace(
+                go.Scatter(
+                    x=[years_before.min(), years_before.max()],
+                    y=[mu_before, mu_before],
+                    mode="lines",
+                    line=dict(color=COLOR_GREEN_ACCENT, width=3, dash="dot"),
+                    name=f"Regime 1 Mean ({mu_before:.1f} mm)",
+                    hoverinfo="name",
+                )
+            )
+
+        if mu_after is not None and len(years_after) > 0:
+            fig.add_trace(
+                go.Scatter(
+                    x=[years_after.min(), years_after.max()],
+                    y=[mu_after, mu_after],
+                    mode="lines",
+                    line=dict(color=COLOR_ROSE_ACCENT, width=3, dash="dot"),
+                    name=f"Regime 2 Mean ({mu_after:.1f} mm)",
+                    hoverinfo="name",
+                )
+            )
+
+        # Vertical line for change point
+        fig.add_vline(
+            x=cp_year,
+            line_width=2.5,
+            line_dash="dash",
+            line_color=COLOR_AMBER_ACCENT,
+            annotation_text=f"Shift: {cp_year} (p={p_val:.4f})" if p_val is not None else f"Shift: {cp_year}",
+            annotation_position="top left",
+            annotation_font=dict(color=COLOR_AMBER_ACCENT, size=11),
+        )
+
+    status_str = "Statistically Significant Shift" if sig else "Weak / Non-Significant Shift"
+    title_text = f"<b>Climate Regime Shift Analysis</b> — {sub_name} ({status_str})"
+
+    fig.update_layout(
+        **PLOTLY_LAYOUT_DEFAULTS,
+        title=dict(text=title_text, font=dict(size=16)),
+        xaxis_title="Year",
+        yaxis_title="Annual Rainfall (mm)",
+        height=450,
+        hovermode="x unified",
+    )
+    return fig
+
+
+def create_forecast_projection_plot(
+    history_df: pd.DataFrame,
+    forecast_res: Dict[str, Any],
+    subdivision_name: str = "",
+    model_name: str = "Forecast Model",
+    value_col: str = "ANNUAL_VALIDATED",
+) -> go.Figure:
+    """Create interactive forecast trajectory plot with historical context and projection band."""
+    fig = go.Figure()
+    if history_df.empty:
+        fig.update_layout(**PLOTLY_LAYOUT_DEFAULTS)
+        return fig
+
+    hist_sorted = history_df.sort_values(by="YEAR").dropna(subset=[value_col])
+
+    # Show recent historical context (e.g. up to last 35 years or all)
+    recent_hist = hist_sorted.tail(35)
+
+    fig.add_trace(
+        go.Scatter(
+            x=recent_hist["YEAR"],
+            y=recent_hist[value_col],
+            mode="lines+markers",
+            line=dict(color=COLOR_PRIMARY_BLUE, width=2),
+            marker=dict(size=5, color=COLOR_CYAN_ACCENT),
+            name="Historical Observed",
+            hovertemplate="<b>Year:</b> %{x}<br><b>Rainfall:</b> %{y:,.1f} mm<extra></extra>",
+        )
+    )
+
+    preds = forecast_res.get("forecasts", [])
+    if preds:
+        pred_df = pd.DataFrame(preds)
+
+        # Connect last historical point to first forecast point
+        last_hist_yr = recent_hist["YEAR"].iloc[-1]
+        last_hist_val = recent_hist[value_col].iloc[-1]
+        conn_years = [last_hist_yr] + pred_df["year"].tolist()
+        conn_preds = [last_hist_val] + pred_df["predicted_annual"].tolist()
+
+        # Uncertainty intervals if lower/upper bound exist
+        if "lower_bound" in pred_df.columns and "upper_bound" in pred_df.columns:
+            conn_lower = [last_hist_val] + pred_df["lower_bound"].tolist()
+            conn_upper = [last_hist_val] + pred_df["upper_bound"].tolist()
+
+            fig.add_trace(
+                go.Scatter(
+                    x=conn_years + conn_years[::-1],
+                    y=conn_upper + conn_lower[::-1],
+                    fill="toself",
+                    fillcolor="rgba(56, 189, 248, 0.15)",
+                    line=dict(color="rgba(255,255,255,0)"),
+                    hoverinfo="skip",
+                    showlegend=True,
+                    name="95% Prediction Interval",
+                )
+            )
+
+        fig.add_trace(
+            go.Scatter(
+                x=conn_years,
+                y=conn_preds,
+                mode="lines+markers",
+                line=dict(color=COLOR_AMBER_ACCENT, width=2.5, dash="dash"),
+                marker=dict(size=6, color=COLOR_AMBER_ACCENT),
+                name=f"{model_name} Projection",
+                hovertemplate="<b>Forecast Year:</b> %{x}<br><b>Predicted:</b> %{y:,.1f} mm<extra></extra>",
+            )
+        )
+
+    title_text = f"<b>Annual Rainfall Forecast Horizon</b> — {subdivision_name} ({model_name})"
+    fig.update_layout(
+        **PLOTLY_LAYOUT_DEFAULTS,
+        title=dict(text=title_text, font=dict(size=16)),
+        xaxis_title="Year",
+        yaxis_title="Annual Rainfall (mm)",
+        height=450,
+        hovermode="x unified",
+    )
+    return fig
